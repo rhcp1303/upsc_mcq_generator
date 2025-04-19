@@ -1,0 +1,35 @@
+import json
+from enum import Enum
+import textwrap
+
+
+class SubjectCode(Enum):
+    MODERN_INDIAN_HISTORY = "MIH"
+    HISTORY_ART_AND_CULTURE = "HAC"
+    POLITY = "POL"
+    INTERNATIONAL_RELATIONS_AND_SECURITY = "IRS"
+    ECONOMICS = "ECO"
+    SCIENCE_AND_TECH = "SNT"
+    ENVIRONMENT = "ENV"
+    GEOGRAPHY = "GEO"
+    SOCIAL_ISSUES = "SOCI"
+    MISCELLANEOUS = "MISC"
+
+
+class QuestionContentType(Enum):
+    STATIC = 'STATIC'
+    CURRENT_AFFAIRS = 'CA'
+
+
+class PatternType(Enum):
+    SINGLE_STATEMENT = "SINGLE_STATEMENT"
+    TWO_STATEMENTS = "TWO_STATEMENTS"
+    THREE_STATEMENTS = "THREE_STATEMENTS"
+    IDENTIFY_FEATURES = "IDENTIFY_FEATURES"
+    MATCH_THE_PAIRS = "MATCH_THE_PAIRS"
+    # ASSERTION_REASONING = "ASSERTION_REASONING"
+
+
+class PDFFileType(Enum):
+    SCANNED = 'scanned'
+    DIGITAL = 'digital'
