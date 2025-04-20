@@ -11,7 +11,6 @@ from ..helpers.prompt_helpers.identify_features_question_prompt_helper import \
     identify_features_question_prompt
 from ..helpers.prompt_helpers.match_the_pairs_question_prompt_helper import \
     match_the_pairs_prompt
-from ..helpers import common_utils as cu
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
@@ -20,6 +19,7 @@ api_key_2 = "AIzaSyC_w68KVtMCloF5V3NKAUBp6EdhqcA0ylw"
 api_key_3 = "AIzaSyAA39dIq31iDJR-i7mZRWEKhkVVIr1Bz4g"
 api_key_4 = "AIzaSyD0nx9rH7HhQZDpJrY0hOaOR9Xok4r-liM"
 api_key_5 = "AIzaSyBq2_GdMf0KhowSVSb0hn4Z_8B81kBewXY"
+
 
 
 def generate_mock_mcq(question_type, keywords):
@@ -53,18 +53,33 @@ def generate_and_format(question_type, keywords):
     return raw_response
 
 
-iface = gr.Interface(
-    fn=generate_and_format,
-    inputs=[
-        gr.Dropdown(
+css = """
+#output_box {
+    width: 100% !important; /* Adjust percentage as needed */
+    min-height: 300px; /* Adjust minimum height as needed */
+    max-height: 600px; /* Adjust maximum height as needed */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    overflow-x: hidden !important; /* Prevent horizontal scrolling */
+    white-space: pre-wrap !important; /* Preserve whitespace and line breaks, wrap text */
+    word-break: break-word !important; /* Force long words to break */
+}
+"""
+
+with gr.Blocks(css=css) as iface:
+    gr.Markdown("# Mock MCQ Generator (UPSC Style)")
+    with gr.Row():
+        question_type_dropdown = gr.Dropdown(
             choices=["Single Statement", "Two Statements", "Three Statements", "Match the Pairs", "Identify Features"],
             label="Question Type"
-        ),
-        gr.Textbox(label="Keywords/Topics (comma-separated)"),
-    ],
-    outputs=gr.Code(label="Generated MCQ"),
-    title="Mock MCQ Generator (UPSC Style)",
-    description="Generate UPSC-style multiple-choice questions based on the selected question type and provided keywords using Gemini-2.0-flash.",
-)
+        )
+        keywords_textbox = gr.Textbox(label="Keywords/Topics (comma-separated)")
+    output_code = gr.Code(label="Generated MCQ", elem_id="output_box")
+    generate_button = gr.Button("Generate MCQ")
+
+    generate_button.click(
+        fn=generate_and_format,
+        inputs=[question_type_dropdown, keywords_textbox],
+        outputs=output_code
+    )
 
 iface.launch()
