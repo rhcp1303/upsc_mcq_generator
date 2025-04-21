@@ -30,10 +30,11 @@ def create_latex_template(questions):
             if 'headings' in q['en']:
                 latex_template += r"\begin{center}\fontsize{9pt}{11pt}\selectfont" + "\n"
                 latex_template += r"\setlength\tabcolsep{15pt} % Increase horizontal space between columns" + "\n"
-                latex_template += r"\begin{tabularx}{\linewidth}{>{\RaggedRight\arraybackslash}X >{\RaggedRight\arraybackslash}X}" + "\n"
-                latex_template += r"\textbf{" + q['en']['headings'][0] + r"} & \textbf{" + q['en']['headings'][1] + r"} \\ \hline\\[0.2cm]" + "\n"
+                latex_template += r"\begin{tabularx}{\linewidth}{>{\RaggedRight\arraybackslash}p{0.45\linewidth} >{\RaggedRight\arraybackslash}p{0.45\linewidth}}" + "\n"
+                latex_template += r"\textbf{" + q['en']['headings'][0] + r"} & \textbf{" + q['en']['headings'][
+                    1] + r"} \\ \hline\\[0.2cm]" + "\n"
                 for i, pair in enumerate(q['en']['pairs']):
-                    latex_template += pair_to_latex(pair, is_first=(i == 0))
+                    latex_template += numbered_pair_to_latex(pair, number=str(i + 1) + ".")
                 latex_template += r"\end{tabularx}\end{center}\normalsize" + "\n"
                 latex_template += r"\setlength\tabcolsep{6pt} % Restore default column separation" + "\n"
             else:
@@ -65,21 +66,27 @@ def create_latex_template(questions):
 """
     return latex_template
 
-def pair_to_latex(pair, is_first=False):
-    """Formats a pair for LaTeX table, handling line breaks and adding vertical space."""
-    space_before = r"\\[0.2cm]" if not is_first else ""
-    return space_before + r"\RaggedRight\arraybackslash " + pair[0] + r" & \RaggedRight\arraybackslash " + pair[1] + r" \\" + "\n"
+
+def numbered_pair_to_latex(pair, number=""):
+    """Formats a numbered pair for LaTeX table with hanging indentation for line breaks."""
+    indent_length = "2em"  # Adjust this value as needed for the width of the number
+    return r"\makebox[" + indent_length + r"][l]{" + number + r"} \RaggedRight\arraybackslash \hangindent=" + indent_length + r" " + \
+        pair[0] + r" & \RaggedRight\arraybackslash \hangindent=0pt " + pair[1] + r" \\" + "\n"
 
 
 questions = [
     {
         "en": {
             "question": "With reference to Centre-State Relations, consider the following pairs:",
-            "headings": ["Committee/Commission with very long text", "Associated Recommendation that is also quite lengthy"],
+            "headings": ["Committee/Commission with very long text",
+                         "Associated Recommendation that is also quite lengthy"],
             "pairs": [
-                ["Sarkaria Commission with a slightly longer name", "Permanent Inter-State Council under Article 263 which can also have more words"],
-                ["Punchhi Commission", "Regulation of deployment of Central Armed Forces in States to a significant extent"],
-                ["Rajamannar Committee with an extended title", "Abolition of All India Services and related matters that require more space"],
+                ["Sarkaria Commission with a slightly longer name",
+                 "Permanent Inter-State Council under Article 263 which can also have more words"],
+                ["Punchhi Commission",
+                 "Regulation of deployment of Central Armed Forces in States to a significant extent"],
+                ["Rajamannar Committee with an extended title",
+                 "Abolition of All India Services and related matters that require more space"],
             ],
             "choices": [
                 "1 only",
@@ -133,7 +140,7 @@ questions = [
     },
 ]
 
+
 def create_pdf():
     latex_code = create_latex_template(questions)
     return latex_code
-

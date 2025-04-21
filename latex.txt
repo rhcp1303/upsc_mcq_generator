@@ -19,11 +19,11 @@
 \begin{enumerate}[label=\textbf{Q.\arabic*.}, itemsep=0.1in]
 \item\needspace{2\baselineskip} With reference to Centre-State Relations, consider the following pairs:\\\begin{center}\fontsize{9pt}{11pt}\selectfont
 \setlength\tabcolsep{15pt} % Increase horizontal space between columns
-\begin{tabularx}{\linewidth}{>{\RaggedRight\arraybackslash}X >{\RaggedRight\arraybackslash}X}
+\begin{tabularx}{\linewidth}{>{\RaggedRight\arraybackslash}p{0.45\linewidth} >{\RaggedRight\arraybackslash}p{0.45\linewidth}}
 \textbf{Committee/Commission with very long text} & \textbf{Associated Recommendation that is also quite lengthy} \\ \hline\\[0.2cm]
-\RaggedRight\arraybackslash Sarkaria Commission with a slightly longer name & \RaggedRight\arraybackslash Permanent Inter-State Council under Article 263 which can also have more words \\
-\\[0.2cm]\RaggedRight\arraybackslash Punchhi Commission & \RaggedRight\arraybackslash Regulation of deployment of Central Armed Forces in States to a significant extent \\
-\\[0.2cm]\RaggedRight\arraybackslash Rajamannar Committee with an extended title & \RaggedRight\arraybackslash Abolition of All India Services and related matters that require more space \\
+\makebox[2em][l]{1.} \RaggedRight\arraybackslash \hangindent=2em Sarkaria Commission with a slightly longer name & \RaggedRight\arraybackslash \hangindent=0pt Permanent Inter-State Council under Article 263 which can also have more words \\
+\makebox[2em][l]{2.} \RaggedRight\arraybackslash \hangindent=2em Punchhi Commission & \RaggedRight\arraybackslash \hangindent=0pt Regulation of deployment of Central Armed Forces in States to a significant extent \\
+\makebox[2em][l]{3.} \RaggedRight\arraybackslash \hangindent=2em Rajamannar Committee with an extended title & \RaggedRight\arraybackslash \hangindent=0pt Abolition of All India Services and related matters that require more space \\
 \end{tabularx}\end{center}\normalsize
 \setlength\tabcolsep{6pt} % Restore default column separation
 \begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]
