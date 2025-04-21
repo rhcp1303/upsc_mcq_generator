@@ -11,6 +11,8 @@ def create_latex_template(questions):
 \usepackage{ragged2e}
 \usepackage{needspace}
 \usepackage{array} % For better table control
+\usepackage{tabularx} % For auto-width tables
+\usepackage{fontsize} % For setting font size
 
 \begin{document}
 
@@ -26,32 +28,33 @@ def create_latex_template(questions):
         # Handle "Match the pairs"
         if 'pairs' in q['en']:
             if 'headings' in q['en']:
-                latex_template += r"\begin{center}"
-                latex_template += r"\begin{tabular}{>{\RaggedRight}p{0.45\linewidth} >{\RaggedRight}p{0.45\linewidth}}"
-                latex_template += r"\textbf{" + q['en']['headings'][0] + r"} & \textbf{" + q['en']['headings'][1] + r"} \\ \hline"
-                for pair in q['en']['pairs']:
-                    latex_template += pair_to_latex(pair)
-                latex_template += r"\end{tabular}"
-                latex_template += r"\end{center}"
-            else:
-                latex_template += r"\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]"
+                latex_template += r"\begin{center}\fontsize{9pt}{11pt}\selectfont" + "\n"
+                latex_template += r"\setlength\tabcolsep{15pt} % Increase horizontal space between columns" + "\n"
+                latex_template += r"\begin{tabularx}{\linewidth}{>{\RaggedRight\arraybackslash}X >{\RaggedRight\arraybackslash}X}" + "\n"
+                latex_template += r"\textbf{" + q['en']['headings'][0] + r"} & \textbf{" + q['en']['headings'][1] + r"} \\ \hline\\[0.2cm]" + "\n"
                 for i, pair in enumerate(q['en']['pairs']):
-                    latex_template += r"\item " + str(i + 1) + ". " + pair[0] + r" : " + pair[1] + r""
-                latex_template += r"\end{enumerate}"
+                    latex_template += pair_to_latex(pair, is_first=(i == 0))
+                latex_template += r"\end{tabularx}\end{center}\normalsize" + "\n"
+                latex_template += r"\setlength\tabcolsep{6pt} % Restore default column separation" + "\n"
+            else:
+                latex_template += r"\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]" + "\n"
+                for i, pair in enumerate(q['en']['pairs']):
+                    latex_template += r"\item " + str(i + 1) + ". " + pair[0] + r" : " + pair[1] + r"" + "\n"
+                latex_template += r"\end{enumerate}" + "\n"
 
         elif 'statements' in q['en']:  # Handle statements
-            latex_template += r"\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]"
+            latex_template += r"\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]" + "\n"
             for s in q['en']['statements']:
-                latex_template += r"\item " + s + r""
-            latex_template += r"\end{enumerate}"
+                latex_template += r"\item " + s + r"" + "\n"
+            latex_template += r"\end{enumerate}" + "\n"
 
         if 'choices' in q['en']:  # Handle multiple choices
-            latex_template += r"\begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]"
+            latex_template += r"\begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]" + "\n"
             for choice in q['en']['choices']:
-                latex_template += r"\item " + choice + r""
-            latex_template += r"\end{enumerate}"
+                latex_template += r"\item " + choice + r"" + "\n"
+            latex_template += r"\end{enumerate}" + "\n"
 
-        latex_template += r"\vspace{0.1in}"
+        latex_template += r"\vspace{0.1in}" + "\n"
 
     latex_template += r"""
 \end{enumerate}
@@ -62,20 +65,21 @@ def create_latex_template(questions):
 """
     return latex_template
 
-def pair_to_latex(pair):
-    """Formats a pair for LaTeX table, handling line breaks."""
-    return r"\RaggedRight " + pair[0] + r" & \RaggedRight " + pair[1] + r" \\"
+def pair_to_latex(pair, is_first=False):
+    """Formats a pair for LaTeX table, handling line breaks and adding vertical space."""
+    space_before = r"\\[0.2cm]" if not is_first else ""
+    return space_before + r"\RaggedRight\arraybackslash " + pair[0] + r" & \RaggedRight\arraybackslash " + pair[1] + r" \\" + "\n"
 
 
 questions = [
     {
         "en": {
             "question": "With reference to Centre-State Relations, consider the following pairs:",
-            "headings": ["Committee/Commission", "Associated Recommendation"],
+            "headings": ["Committee/Commission with very long text", "Associated Recommendation that is also quite lengthy"],
             "pairs": [
-                ["Sarkaria Commission", "Permanent Inter-State Council under Article 263"],
-                ["Punchhi Commission", "Regulation of deployment of Central Armed Forces in States"],
-                ["Rajamannar Committee", "Abolition of All India Services"],
+                ["Sarkaria Commission with a slightly longer name", "Permanent Inter-State Council under Article 263 which can also have more words"],
+                ["Punchhi Commission", "Regulation of deployment of Central Armed Forces in States to a significant extent"],
+                ["Rajamannar Committee with an extended title", "Abolition of All India Services and related matters that require more space"],
             ],
             "choices": [
                 "1 only",
@@ -132,3 +136,4 @@ questions = [
 def create_pdf():
     latex_code = create_latex_template(questions)
     return latex_code
+
