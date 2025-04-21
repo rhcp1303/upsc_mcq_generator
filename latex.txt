@@ -1,0 +1,23 @@
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{needspace}
+\usepackage{array} % For better table control
+
+\begin{document}
+
+\begin{multicols}{2}
+\RaggedRight
+
+\begin{enumerate}[label=\textbf{Q.\arabic*.}, itemsep=0.1in]
+\item\needspace{2\baselineskip} With reference to Centre-State Relations, consider the following pairs:\\\begin{center}\begin{tabular}{>{\RaggedRight}p{0.45\linewidth} >{\RaggedRight}p{0.45\linewidth}}\textbf{Committee/Commission} & \textbf{Associated Recommendation} \\ \hline\RaggedRight Sarkaria Commission & \RaggedRight Permanent Inter-State Council under Article 263 \\\RaggedRight Punchhi Commission & \RaggedRight Regulation of deployment of Central Armed Forces in States \\\RaggedRight Rajamannar Committee & \RaggedRight Abolition of All India Services \\\end{tabular}\end{center}\begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]\item 1 only\item 1 and 2 only\item 2 and 3 only\item 1, 2 and 3\end{enumerate}\vspace{0.1in}\item\needspace{2\baselineskip} Consider the following statements regarding Centre-State financial relations in India:\\\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]\item The Finance Commission's recommendations on the distribution of tax revenues between the Union and the States are binding on the Union Government.\item Grants-in-aid under Article 275 of the Constitution are provided to States based solely on the recommendations of the Finance Commission.\item The Goods and Services Tax (GST) Council is empowered to make recommendations to the Union and the States on matters related to GST, but its decisions are non-binding in nature.\end{enumerate}\begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]\item Only one\item Only two\item All three\item None\end{enumerate}\vspace{0.1in}\item\needspace{2\baselineskip} The Sarkaria Commission's recommendations on Centre-State relations, while largely accepted, faced specific criticisms regarding their implementation and scope. Which of the following best encapsulates a significant critique of the post-Sarkaria Commission scenario?\\\begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]\item The near-complete adoption of all recommendations led to an over-centralized system, diminishing state autonomy beyond what the Commission intended.\item The Commission's proposals for fiscal federalism were fully implemented, but the states lacked the administrative capacity to effectively utilize the increased resources.\item Despite some progress, the selective implementation of recommendations, particularly concerning the deployment of central forces in states, often bypassed the spirit of consultation and consensus advocated by the Commission.\item The establishment of the Inter-State Council, as recommended, became defunct due to the lack of political will from both the Centre and the states to address contentious issues.\end{enumerate}\vspace{0.1in}\item\needspace{2\baselineskip} Consider the following statements regarding Centre-State financial relations in India:\\\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]\item The Finance Commission is a constitutional body primarily responsible for recommending the distribution of net proceeds of taxes between the Union and the States, and the principles that should govern the grants-in-aid of the revenues of the States out of the Consolidated Fund of India.\item Article 293 of the Constitution empowers the States to borrow only from the Union Government and prevents them from raising loans directly from the open market or other financial institutions.\end{enumerate}\begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]\item 1 only\item 2 only\item Both 1 and 2\item Neither 1 nor 2\end{enumerate}\vspace{0.1in}
+\end{enumerate}
+
+\end{multicols}
+
+\end{document}
