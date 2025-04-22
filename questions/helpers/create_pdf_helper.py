@@ -18,7 +18,7 @@ def create_latex_template(questions):
 
 \begin{document}
 
-\begin{multicols}{2}
+\begin{multicols}{2}[\setlength{\columnsep}{0.5in}] % Increased column separation
 \RaggedRight
 
 \begin{enumerate}[label=\textbf{Q.\arabic*.}, itemsep=0.1in]
@@ -64,7 +64,7 @@ def create_latex_template(questions):
                 latex_template += r"\item " + choice + r"" + "\n"
             latex_template += r"\end{enumerate}" + "\n"
 
-        latex_template += r"\vspace{0.1in}" + "\n" # Consistent space after each question block
+        latex_template += r"\vspace{0.1in}" + "\n"
 
     latex_template += r"""
 \end{enumerate}
