@@ -13,6 +13,8 @@ def create_latex_template(questions):
 \usepackage{array} % For better table control
 \usepackage{tabularx} % For auto-width tables
 \usepackage{fontsize} % For setting font size
+\usepackage[none]{hyphenat} % Disable hyphenation
+
 
 \begin{document}
 
