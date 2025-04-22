@@ -37,12 +37,17 @@ def create_latex_template(questions):
                     1] + r"} \\ \hline\\[0.2cm]" + "\n"
                 for i, pair in enumerate(q['en']['pairs']):
                     latex_template += numbered_pair_to_latex(pair, number=str(i + 1) + ".")
+                    if i < len(q['en']['pairs']) - 1:
+                        latex_template += r"\\[0.3\baselineskip]" + "\n"
                 latex_template += r"\end{tabularx}\end{center}\normalsize" + "\n"
                 latex_template += r"\setlength\tabcolsep{6pt} % Restore default column separation" + "\n"
             else:
                 latex_template += r"\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]" + "\n"
                 for i, pair in enumerate(q['en']['pairs']):
-                    latex_template += r"\item " + str(i + 1) + ". " + pair[0] + r" : " + pair[1] + r"" + "\n"
+                    latex_template += r"\item " + str(i + 1) + ". " + pair[0] + r" : " + pair[1] + r""
+                    if i < len(q['en']['pairs']) - 1:
+                        latex_template += r"\vspace{0.3\baselineskip}"
+                    latex_template += r"\n"
                 latex_template += r"\end{enumerate}" + "\n"
 
         elif 'statements' in q['en']:  # Handle statements
