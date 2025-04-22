@@ -70,7 +70,7 @@ def create_latex_template(questions):
 def numbered_pair_to_latex(pair, number=""):
     """Formats a numbered pair for LaTeX table with hanging indentation for line breaks."""
     indent_length = "2em"  # Adjust this value as needed for the width of the number
-    return r"\makebox[" + indent_length + r"][l]{" + number + r"} \RaggedRight\arraybackslash \hangindent=" + indent_length + r" " + \
+    return r"\makebox[" + indent_length + r"][l]{" + number + r"}\RaggedRight\arraybackslash \hangindent=" + indent_length + r" " + \
         pair[0] + r" & \RaggedRight\arraybackslash \hangindent=0pt " + pair[1] + r" \\" + "\n"
 
 
