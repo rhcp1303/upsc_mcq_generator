@@ -67,6 +67,20 @@
 \item Neither 1 nor 2
 \end{enumerate}
 \vspace{0.1in}
+\item\needspace{2\baselineskip} Consider the following:\\\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]
+\item The power to legislate on residuary subjects.
+\item The appointment and removal of Governors of States.
+\item The composition and powers of the Inter-State Council.
+\item The principles governing the distribution of tax revenues between the Centre and the States.
+\end{enumerate}
+How many of the above reflect the Union Government's dominance in Centre-State relations in India?\\
+\begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]
+\item Only One
+\item Only Two
+\item Only Three
+\item Only Four
+\end{enumerate}
+\vspace{0.1in}
 
 \end{enumerate}
 

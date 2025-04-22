@@ -55,6 +55,8 @@ def create_latex_template(questions):
             for s in q['en']['statements']:
                 latex_template += r"\item " + s + r"" + "\n"
             latex_template += r"\end{enumerate}" + "\n"
+            if 'final_statement' in q['en']:
+                latex_template += q['en']['final_statement'] + r"\\" + "\n"
 
         if 'choices' in q['en']:  # Handle multiple choices
             latex_template += r"\begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]" + "\n"
@@ -62,7 +64,7 @@ def create_latex_template(questions):
                 latex_template += r"\item " + choice + r"" + "\n"
             latex_template += r"\end{enumerate}" + "\n"
 
-        latex_template += r"\vspace{0.1in}" + "\n"
+        latex_template += r"\vspace{0.1in}" + "\n" # Consistent space after each question block
 
     latex_template += r"""
 \end{enumerate}
@@ -145,6 +147,24 @@ questions = [
             ],
         },
     },
+    {
+        "en":{
+            "question":"Consider the following:",
+            "statements": [
+                "The power to legislate on residuary subjects.",
+                "The appointment and removal of Governors of States.",
+                "The composition and powers of the Inter-State Council.",
+                "The principles governing the distribution of tax revenues between the Centre and the States."
+            ],
+            "final_statement":"How many of the above reflect the Union Government's dominance in Centre-State relations in India?",
+            "choices": [
+                "Only One",
+                "Only Two",
+                "Only Three",
+                "Only Four"
+            ]
+        }
+    }
 ]
 
 
