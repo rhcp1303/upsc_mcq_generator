@@ -1,5 +1,8 @@
+import json
+
 import gradio as gr
 import os
+
 from langchain_google_genai import ChatGoogleGenerativeAI
 from ..helpers.prompt_helpers.single_statement_question_prompt_helper import \
     single_statement_question_prompt
@@ -21,7 +24,6 @@ api_key_4 = "AIzaSyD0nx9rH7HhQZDpJrY0hOaOR9Xok4r-liM"
 api_key_5 = "AIzaSyBq2_GdMf0KhowSVSb0hn4Z_8B81kBewXY"
 
 
-
 def generate_mock_mcq(question_type, keywords):
     if question_type == "Single Statement":
         prompt = single_statement_question_prompt
@@ -38,6 +40,7 @@ def generate_mock_mcq(question_type, keywords):
     elif question_type == "Identify Features":
         prompt = identify_features_question_prompt
         api_key = api_key_5
+
     else:
         return "Invalid question type"
 
@@ -50,7 +53,12 @@ def generate_mock_mcq(question_type, keywords):
 
 def generate_and_format(question_type, keywords):
     raw_response = generate_mock_mcq(question_type, keywords)
-    return raw_response
+    print("raw response:\n")
+    print(raw_response)
+    cleaned_json = raw_response.replace("```json", "").replace("```", "")
+    print("cleaned json: \n"+cleaned_json)
+    parsed_json = json.loads(cleaned_json)
+    return parsed_json
 
 
 css = """
@@ -73,13 +81,13 @@ with gr.Blocks(css=css) as iface:
             label="Question Type"
         )
         keywords_textbox = gr.Textbox(label="Keywords/Topics (comma-separated)")
-    output_code = gr.Code(label="Generated MCQ", elem_id="output_box")
+    output_json = gr.JSON(label="Generated MCQ", elem_id="output_box")
     generate_button = gr.Button("Generate MCQ")
 
     generate_button.click(
         fn=generate_and_format,
         inputs=[question_type_dropdown, keywords_textbox],
-        outputs=output_code
+        outputs=output_json
     )
 
 iface.launch()

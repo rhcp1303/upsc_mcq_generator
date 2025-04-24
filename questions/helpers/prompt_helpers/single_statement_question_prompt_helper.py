@@ -48,37 +48,49 @@ single_statement_question_prompt = """
     * Incorporate key UPSC-relevant points and perspectives in the explanation.
 
     
+**Output Format:**
+
+Return the generated question as a JSON object without any backtick (don't add ```json) in the following format:
+
+{{
+    "question": "(Generated Question Text - only the introduction statement)",
+    "choices": [
+        "Choice 1 without enumerator",
+        "Choice 2 without enumerator",
+        "Choice 3 without enumerator",
+        "Choice 4 without enumerator"
+    ],
+    "correct_answer": "(Correct Option - a, b, c, or d)",
+    "explanation": "(Detailed Explanation with escaped special characters and \\n for newlines)"
+}}
 
 **Example Response:**
 
-Q.1)
-Which of the following statements about the Indian National Congress is correct?
+{{
+    "question": "Which of the following statements about the Indian National Congress is correct?",
+    "choices": [
+        "It was founded primarily by Indian businessmen.",
+        "Its initial focus was on social reforms rather than political independence.",
+        "Mahatma Gandhi led the Congress from its inception.",
+        "It was founded in 1885 in Kolkata."
+    ],
+    "correct_answer": "d",
+    "explanation": "The Indian National Congress was founded on December 28, 1885, in Kolkata (then Calcutta). While some businessmen were involved, the Congress also included intellectuals, lawyers, and social reformers. The initial focus was on moderate reforms within the British system. Mahatma Gandhi joined the Congress later in his life and became a prominent leader."
+}}
 
-(a) It was founded primarily by Indian businessmen.
-(b) Its initial focus was on social reforms rather than political independence.
-(c) Mahatma Gandhi led the Congress from its inception.
-(d) It was founded in 1885 in Kolkata.
+{{
+    "question": "Which of the following events marked a turning point in the Indian National Congress's approach towards achieving independence?",
+    "choices": [
+        "The Surat Split of 1907",
+        "The Lucknow Pact of 1916",
+        "The Non-Cooperation Movement of 1920",
+        "The Poona Pact of 1932"
+    ],
+    "correct_answer": "c",
+    "explanation": "The Non-Cooperation Movement, launched in 1920 under Gandhi's leadership, marked a significant shift in the Congress's approach. It moved away from moderate reforms and embraced mass civil disobedience, marking a more assertive and radical phase in the struggle for independence."
+}}
 
 
-Correct Answer: (d)
-
-Explanation:
-
-The Indian National Congress was founded on December 28, 1885, in Kolkata (then Calcutta). While some businessmen were involved, the Congress also included intellectuals, lawyers, and social reformers. The initial focus was on moderate reforms within the British system. Mahatma Gandhi joined the Congress later in his life and became a prominent leader.
-
-Q.2) 
-Which of the following events marked a turning point in the Indian National Congress's approach towards achieving independence?
-
-(a) The Surat Split of 1907
-(b) The Lucknow Pact of 1916
-(c) The Non-Cooperation Movement of 1920
-(d) The Poona Pact of 1932
-
-Correct Answer: (c)
-
-Explanation:
-
-The Non-Cooperation Movement, launched in 1920 under Gandhi's leadership, marked a significant shift in the Congress's approach. It moved away from moderate reforms and embraced mass civil disobedience, marking a more assertive and radical phase in the struggle for independence.
 
 
 **Note:**

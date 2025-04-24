@@ -115,32 +115,50 @@ three_statements_question_prompt = """
     * Provide a detailed explanation for the correct answer (minimum 500 words).
     * Incorporate key UPSC-relevant points and perspectives in the explanation.
 
+**Output Format:**
+
+Return the generated question as a JSON object without any backtick (don't add ```json) in the following format:
+
+{{
+    "question": "(Generated Question Text - only the introduction statement)",
+    "statements": [
+        "(Statement 1 without enumerator)",
+        "(Statement 2 without enumerator)",
+        "(Statement 3 without enumerator)"
+    ],
+    "final_statement": "(Final statement of the question)",
+    "choices": [
+        "Choice 1 without enumerator",
+        "Choice 2 without enumerator",
+        "Choice 3 without enumerator",
+        "Choice 4 without enumerator"
+    ],
+    "correct_answer": "(Correct Option - a, b, c, or d)",
+    "explanation": "(Detailed Explanation with escaped special characters and \\n for newlines)"
+}}
+
 **Example Response Required:**
 
-Q.12) 
-Consider the following statements:
-1. In the revenue administration of Delhi Sultanate, the in-charge of revenue collection was known as 'Amil'.
-2. The Iqta system of Sultans of Delhi was an ancient indigenous institution.
-3. The office of 'Mir Bakshi' came into existence during the reign of Khalji Sultans of Delhi.
-Which of the statements given above is/are correct?
-(a) 1 only
-(b) 1 and 2 only
-(c) 3 only
-(d) 1, 2 and 3
+{{
+    "question": "Consider the following statements:",
+    "statements": [
+        "In the revenue administration of Delhi Sultanate, the in-charge of revenue collection was known as 'Amil'.",
+        "The Iqta system of Sultans of Delhi was an ancient indigenous institution.",
+        "The office of 'Mir Bakshi' came into existence during the reign of Khalji Sultans of Delhi."
+    ],
+    "final_statement": "Which of the statements given above is/are correct?",
+    "choices": [
+        "1 only",
+        "1 and 2 only",
+        "3 only",
+        "1, 2 and 3"
+    ],
+    "correct_answer": "a",
+    "explanation": "Amils were officers deputed to collect revenue\\nduring the sultanate era in North India. Mir\\nBakshi, on the other hand, was a Mughal high\\noffice in charge of military pay and accounts.\\nIqta system of land control was introduced in\\nIndia by the Delhi sultans. It was originally of\\nCentral Asian and West Asian origin."
+}}
 
-Correct Answer: (a)
-
-Explanation:
-
-Amils were officers deputed to collect revenue
-during the sultanate era in North India. Mir
-Bakshi, on the other hand, was a Mughal high
-office in charge of military pay and accounts.
-Iqta system of land control was introduced in
-India by the Delhi sultans. It was originally of
-Central Asian and West Asian origin. 
-
-
+ 
+ 
 **Note:**
 
 * Avoid mentioning any information related to the prompt,query, source_content, target_content,  input text, input document, 

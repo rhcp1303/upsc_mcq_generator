@@ -105,56 +105,63 @@ two_statements_question_prompt = """
     * Provide a detailed explanation for the correct answer (minimum 500 words).
     * Incorporate key UPSC-relevant points and perspectives in the explanation.
     
+**Output Format:**
 
+Return the generated question as a JSON object without any backtick (don't add ```json) in the following format:
+
+{{
+    "question": "(Generated Question Text - only the introduction statement)",
+    "statements": [
+        "(Statement 1 without enumerator)",
+        "(Statement 2 without enumerator)"
+    ],
+    "final_statement": "(Final statement of the question)",
+    "choices": [
+        "Choice 1 without enumerator",
+        "Choice 2 without enumerator",
+        "Choice 3 without enumerator",
+        "Choice 4 without enumerator"
+    ],
+    "correct_answer": "(Correct Option - a, b, c, or d)",
+    "explanation": "(Detailed Explanation with escaped special characters and \\n for newlines)"
+
+}}
 
 **Example Response Required:**
+{{
+    "question": "With reference to the proposals of Cripps Mission, consider the following statements:",
 
-Q.1)
-With reference to the proposals of Cripps Mission, consider the following statements:
-1. The Constituent Assembly would have members nominated by the Provincial Assemblies as well as the Princely States.
-2. Any Province, which is not prepared to accept the new Constitution would have the right to sign a separate agreement 
-   with Britain regarding its future status.
-Which of the statements given above is/are correct?**
-(a) 1 only
-(b) 2 only
-(c) Both 1 and 2
-(d) Neither 1 nor 2
+    "statements": [
+        "The Constituent Assembly would have members nominated by the Provincial Assemblies as well as the Princely States.",
+        "Any Province, which is not prepared to accept the new Constitution would have the right to sign a separate agreement with Britain regarding its future status."
+    ],
+    "final_statement": "Which of the statements given above is/are correct?",
+    "choices": [
+        "1 only",
+        "2 only",
+        "Both 1 and 2",
+        "Neither 1 nor 2"
+    ],
+    "correct_answer": "b",
+    "explanation": "● In March 1942, a mission headed by Stafford Cripps was sent to India with constitutional proposals to seek Indian support for the war. \\n● It proposed that the Constituent Assembly was to be composed of elected (and not\\nnominated) members from provinces. Only the section representing the Princely states was\\nto be nominated. So, statement 1 is not correct.\\n● It also stated that if any Province which is not prepared to accept the new Constitution would\\n have the right to sign a separate agreement with Britain regarding its future status. This \\n became the primary reason for the failure of the Cripps mission as this provision allowed for \\n balkanization of India. So, statement 2 is correct."
+}}
 
-Correct Answer: (b)
-
-Explanation:
-
-● In March 1942, a mission headed by Stafford Cripps was sent to India with constitutional
-proposals to seek Indian support for the war.
-● It proposed that the Constituent Assembly was to be composed of elected (and not
-nominated) members from provinces. Only the section representing the Princely states was
-to be nominated. So, statement 1 is not correct.
-● It also stated that if any Province which is not prepared to accept the new Constitution would
-have the right to sign a separate agreement with Britain regarding its future status. This
-became the primary reason for the failure of the Cripps mission as this provision allowed for
-balkanization of India. So, statement 2 is correct.
-
-
-
-Q.2) 
-Consider the following statements:
-1. The Montagu-Chelmsford Reforms of 1919 recommended granting voting rights to all the women above the age of 21.
-2. The Government of India Act of 1935 gave women reserved seats in the legislature.
-Which of the statements given above is/are correct?
-(a) 1 only
-(b) 2 only
-(c) Both 1 and 2
-(d) Neither 1 nor 2
-
-Correct Answer: (d)
-
-Explanation:
-
-Statement 1 is incorrect. The Montague Chelmsford reforms of 1919 did not recommend granting voting rights
-to all women above the age of 21. Although it recommended the voting rights to women in limited numbers
-to be extended on the basis of property, tax or education.
-Statement 2 is incorrect. The Government of India Act 1935 gave women separate electorate (and did not
-reserved seats for women in legislature). It provided separate electorates to depressed classes and labours also.
+{{
+    "question": "Consider the following statements:",
+    "statements": [
+        "The Montagu-Chelmsford Reforms of 1919 recommended granting voting rights to all the women above the age of 21.",
+        "The Government of India Act of 1935 gave women reserved seats in the legislature."
+    ],
+    "final_statement": "Which of the statements given above is/are correct?",
+    "choices": [
+        "1 only",
+        "2 only",
+        "Both 1 and 2",
+        "Neither 1 nor 2"
+    ],
+    "correct_answer": "d",
+    "explanation": "Statement 1 is incorrect. The Montague Chelmsford reforms of 1919 did not recommend granting voting rights to all women above the age of 21. Although it recommended the voting rights to women in limited numbers to be extended on the basis of property, tax or education.\n\nStatement 2 is incorrect. The Government of India Act 1935 gave women separate electorate (and did not reserved seats for women in legislature). It provided separate electorates to depressed classes and labours also."
+}}
 
 
 **Note:**

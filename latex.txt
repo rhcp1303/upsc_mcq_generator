@@ -67,6 +67,18 @@
 \item Neither 1 nor 2
 \end{enumerate}
 \vspace{0.1in}
+\item\needspace{2\baselineskip} Consider the following statements regarding the Sarkaria Commission:\\\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]
+\item 1. It recommended the abolition of Article 356 of the Constitution, advocating for alternative mechanisms to address constitutional breakdowns in states.
+\item 2. It suggested that the Governor should be an eminent person from outside the state, and should be detached from local politics of the state.
+\end{enumerate}
+Which of the statements given above is/are correct?\\
+\begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]
+\item (a) 1 only
+\item (b) 2 only
+\item (c) Both 1 and 2
+\item (d) Neither 1 nor 2
+\end{enumerate}
+\vspace{0.1in}
 \item\needspace{2\baselineskip} Consider the following:\\\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]
 \item The power to legislate on residuary subjects.
 \item The appointment and removal of Governors of States.
@@ -79,6 +91,18 @@ How many of the above reflect the Union Government's dominance in Centre-State r
 \item Only Two
 \item Only Three
 \item Only Four
+\end{enumerate}
+\vspace{0.1in}
+\item\needspace{2\baselineskip} Consider the following statements:\\\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]
+\item Article 263 of the Indian Constitution mandates the establishment of an Inter-State Council only upon the recommendation of the Sarkaria Commission.
+\item The recommendations of the Punchhi Commission on Centre-State relations suggest that the Governor of a state should not be burdened with the Chancellorship of universities.
+\end{enumerate}
+Which of the statements given above is/are correct?\\
+\begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]
+\item 1 only
+\item 2 only
+\item Both 1 and 2
+\item Neither 1 nor 2
 \end{enumerate}
 \vspace{0.1in}
 

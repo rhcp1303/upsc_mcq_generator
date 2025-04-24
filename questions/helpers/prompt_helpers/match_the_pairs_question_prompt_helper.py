@@ -85,55 +85,58 @@ match_the_pairs_prompt = """
     * Provide a detailed explanation for the correct answer (minimum 500 words).
     * Incorporate key UPSC-relevant points and perspectives in the explanation.
 
-8. **Presentation**
 
-    *   Align the pairs properly with tabs, spaces and indentations such that 
 
-        Example
-        *1. Consider the following pairs:**
+**Output Format:**
 
-               Act                                          Prominent Feature
-            1. Regulating Act of 1773                   :   Established a Supreme Court at Calcutta
-            2. Amending Act of 1781                     :   Exempted revenue matters from Supreme Court jurisdiction
-            3. Pitt's India Act of 1784                 :   Created the Board of Control
-            4. Charter Act of 1833                      :   Made the Governor-General of Bengal the Governor-General of India
+Return the generated question as a JSON object without any backtick (don't add ```json) in the following format:
 
-            Which of the pairs given above is/are correctly matched?
-            (a) 1 only
-            (b) 1, 2, and 3 only
-            (c) 1, 2, 3, and 4
-            (d) 2 and 4 only
-
+{{
+    "question": "(Generated Question Text - only the introduction statement)",
+    "headings": ["(Heading 1)","(Heading 2)"],
+    
+    "pairs": [
+        ["(Element 1)","(Element 2)"],
+        ["(Element 1)","(Element 2)"],
+        ["(Element 1)","(Element 2)"],
+        ["(Element 1)","(Element 2)"],
+        ["(Element 1)","(Element 2)"]
+    ],
+    "final_statement": "(Final statement of the question)",
+    "choices": [
+        "Choice 1 without enumerator",
+        "Choice 2 without enumerator",
+        "Choice 3 without enumerator",
+        "Choice 4 without enumerator"
+    ],
+    "correct_answer": "(Correct Option - a, b, c, or d)",
+    "explanation": "(Detailed Explanation with escaped special characters and \\n for newlines)"
+}}
 
 
 **Example Response Required:**
 
-Q.6) 
-Consider the following pairs:
-   Movement                                     Organization Leader
-1. All India Anti-Untouchability League   :     Mahatma Gandhi
-2. All India Kisan Sabha                  :     Swami Sahajanand Saraswati
-3. Self-Respect Movement                  :     E. V. Ramaswami Naicker
-Which of the pairs given above is/are correctly matched?
-(a) 1 only
-(b) 1 and 2 only
-(c) 2 and 3 only
-(d) 1, 2 and 3
+{{
+    "question": "Consider the following pairs:",
+    "headings": ["Movement","Organization Leader"],
+    
+    "pairs": [
+        ["All India Anti-Untouchability League","Mahatma Gandhi"],
+        ["All India Kisan Sabha","Swami Sahajanand Saraswati"],
+        ["Self-Respect Movement","E. V. Ramaswami Naicker"]
+    ],
+    "final_statement": "Which of the pairs given above is/are correctly matched?",
+    "choices": [
+        "1 only",
+        "1 and 2 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+    ],
+    "correct_answer": "d",
+    "explanation": "Gandhi set up All India Anti-Untouchability \\nLeague in September 1932. (Spectrum Page\\n438).\\nThe All India Kisan Sabha was founded in\\nLucknow in April 1936 With Swami Sahjananda\\nSaraswati as the president. (Spectrum Page\\n652).\\nSelf-Respect Movement emerged in South\\nIndia under the leadership of E Ramaswamy\\nNaicker"
 
-Correct Answer: (d)
+}}
 
-Explanation:
-
-Gandhi set up All India Anti-Untouchability
-League in September 1932. (Spectrum Page
-438).
-The All India Kisan Sabha was founded in
-Lucknow in April 1936 With Swami Sahjananda
-Saraswati as the president. (Spectrum Page
-652).
-Self-Respect Movement emerged in South
-India under the leadership of E Ramaswamy
-Naicker
 
 **Note:**
 
