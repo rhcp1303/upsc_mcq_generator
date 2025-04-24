@@ -9,7 +9,10 @@ class Command(BaseCommand):
     help = 'This is a utility management command for testing purpose'
 
     def handle(self, *args, **options):
-        latex_code = helper.create_pdf()
-        with open("latex.txt","w") as file:
-            file.write(latex_code)
+        latex_code_questions = helper.create_question_pdf()
+        latex_code_solutions = helper.create_solution_pdf()
+        with open("latex_question.txt","w") as file:
+            file.write(latex_code_questions)
+        with open("latex_solution.txt","w") as file:
+            file.write(latex_code_solutions)
         print("here")

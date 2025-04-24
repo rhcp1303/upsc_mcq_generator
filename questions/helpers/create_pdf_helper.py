@@ -1,4 +1,4 @@
-def create_latex_template(questions):
+def create_latex_template_for_questions(questions):
     latex_template = r"""
 \documentclass[10pt,a4paper]{article}
 \usepackage[margin=0.7in]{geometry}
@@ -79,6 +79,57 @@ def numbered_pair_to_latex(pair, number=""):
         pair[0] + r" & \RaggedRight\arraybackslash \hangindent=0pt " + pair[1] + r" \\" + "\n"
 
 
+def create_latex_template_for_solutions(questions):
+    latex_template = r"""
+    \documentclass[11pt,a4paper]{article}
+    \usepackage[margin=0.7in, right=1in]{geometry} % Added right margin
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{enumitem}
+    \usepackage{ragged2e}
+    \usepackage{needspace}
+    \usepackage{array}
+    \usepackage{tabularx}
+    \usepackage{fontsize}
+    \usepackage[none]{hyphenat}
+    \usepackage{xcolor}
+
+    \definecolor{solutioncolor}{rgb}{0.1, 0.5, 0.2}
+    \setlength{\parindent}{0pt}
+
+    \begin{document}
+
+    \begin{multicols}{1}
+    \RaggedRight
+
+    \section*{\centering ANSWERS}
+    \hrulefill
+    \vspace{0.5cm}
+
+    """
+
+    for i, q in enumerate(questions):
+        latex_template += r"\needspace{1\baselineskip}" + "\n"
+        latex_template += r"\textbf{Q." + str(i + 1) + ".}" + r" "
+        if 'correct_answer' in q['en']:
+            latex_template += r"\textbf{\textcolor{solutioncolor}{" + q['en'][
+                'correct_answer'].upper() + r"}}" + r"\\" + "\n"
+        else:
+            latex_template += "No Answer Provided\\" + "\n"
+        latex_template += r"\vspace{0.1cm}" + "\n"
+
+        if 'explanation' in q['en']:
+            latex_template += q['en']['explanation'].replace("\n\n", "\n\n\\vspace{0.2cm}\n\n") + "\n"
+            latex_template += r"\vspace{0.3cm}" + "\n"
+
+    latex_template += r"""
+    \end{multicols}
+
+    \end{document}
+    """
+    return latex_template
+
+
 questions = [{
     "en": {
         "question": "With reference to Centre-State relations in India, consider the following statements:",
@@ -137,6 +188,11 @@ questions = [{
 ]
 
 
-def create_pdf():
-    latex_code = create_latex_template(questions)
+def create_question_pdf():
+    latex_code = create_latex_template_for_questions(questions)
+    return latex_code
+
+
+def create_solution_pdf():
+    latex_code = create_latex_template_for_solutions(questions)
     return latex_code
