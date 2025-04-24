@@ -19,29 +19,12 @@
 \RaggedRight
 
 \begin{enumerate}[label=\textbf{Q.\arabic*.}, itemsep=0.1in]
-\item\needspace{2\baselineskip} With reference to Centre-State Relations, consider the following pairs:\\\begin{center}\fontsize{9pt}{11pt}\selectfont
-\setlength\tabcolsep{15pt} % Increase horizontal space between columns
-\begin{tabularx}{\linewidth}{>{\RaggedRight\arraybackslash}p{0.45\linewidth} >{\RaggedRight\arraybackslash}p{0.45\linewidth}}
-\textbf{Committee/Commission with very long text} & \textbf{Associated Recommendation that is also quite lengthy} \\ \hline\\[0.2cm]
-\makebox[2em][l]{1.}\RaggedRight\arraybackslash \hangindent=2em Sarkaria Commission with a slightly longer name & \RaggedRight\arraybackslash \hangindent=0pt Permanent Inter-State Council under Article 263 which can also have more words \\
-\\[0.3\baselineskip]
-\makebox[2em][l]{2.}\RaggedRight\arraybackslash \hangindent=2em Punchhi Commission & \RaggedRight\arraybackslash \hangindent=0pt Regulation of deployment of Central Armed Forces in States to a significant extent \\
-\\[0.3\baselineskip]
-\makebox[2em][l]{3.}\RaggedRight\arraybackslash \hangindent=2em Rajamannar Committee with an extended title & \RaggedRight\arraybackslash \hangindent=0pt Abolition of All India Services and related matters that require more space \\
-\end{tabularx}\end{center}\normalsize
-\setlength\tabcolsep{6pt} % Restore default column separation
-\begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]
-\item 1 only
-\item 1 and 2 only
-\item 2 and 3 only
-\item 1, 2 and 3
+\item\needspace{2\baselineskip} With reference to Centre-State relations in India, consider the following statements:\\\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]
+\item The Sarkaria Commission recommended the establishment of a permanent Inter-State Council under Article 263 of the Constitution, but proposed that its decisions should be binding on both the Union and the States.
+\item The Finance Commission's recommendations on the distribution of tax revenue between the Union and the States are binding on the Union Government, ensuring predictable and equitable resource allocation.
+\item Article 356 of the Constitution, concerning President's Rule, can only be invoked if there is a breakdown of constitutional machinery in the entire state, and not in a specific part or region of the state.
 \end{enumerate}
-\vspace{0.1in}
-\item\needspace{2\baselineskip} Consider the following statements regarding Centre-State financial relations in India:\\\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]
-\item The Finance Commission's recommendations on the distribution of tax revenues between the Union and the States are binding on the Union Government.
-\item Grants-in-aid under Article 275 of the Constitution are provided to States based solely on the recommendations of the Finance Commission.
-\item The Goods and Services Tax (GST) Council is empowered to make recommendations to the Union and the States on matters related to GST, but its decisions are non-binding in nature.
-\end{enumerate}
+Which of the statements given above is/are correct?\\
 \begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]
 \item Only one
 \item Only two
@@ -49,60 +32,24 @@
 \item None
 \end{enumerate}
 \vspace{0.1in}
-\item\needspace{2\baselineskip} The Sarkaria Commission's recommendations on Centre-State relations, while largely accepted, faced specific criticisms regarding their implementation and scope. Which of the following best encapsulates a significant critique of the post-Sarkaria Commission scenario?\\\begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]
-\item The near-complete adoption of all recommendations led to an over-centralized system, diminishing state autonomy beyond what the Commission intended.
-\item The Commission's proposals for fiscal federalism were fully implemented, but the states lacked the administrative capacity to effectively utilize the increased resources.
-\item Despite some progress, the selective implementation of recommendations, particularly concerning the deployment of central forces in states, often bypassed the spirit of consultation and consensus advocated by the Commission.
-\item The establishment of the Inter-State Council, as recommended, became defunct due to the lack of political will from both the Centre and the states to address contentious issues.
-\end{enumerate}
-\vspace{0.1in}
-\item\needspace{2\baselineskip} Consider the following statements regarding Centre-State financial relations in India:\\\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]
-\item The Finance Commission is a constitutional body primarily responsible for recommending the distribution of net proceeds of taxes between the Union and the States, and the principles that should govern the grants-in-aid of the revenues of the States out of the Consolidated Fund of India.
-\item Article 293 of the Constitution empowers the States to borrow only from the Union Government and prevents them from raising loans directly from the open market or other financial institutions.
-\end{enumerate}
+\item\needspace{2\baselineskip} With reference to Centre-State relations, consider the following pairs:\\\begin{center}\fontsize{9pt}{11pt}\selectfont
+\setlength\tabcolsep{15pt} % Increase horizontal space between columns
+\begin{tabularx}{\linewidth}{>{\RaggedRight\arraybackslash}p{0.45\linewidth} >{\RaggedRight\arraybackslash}p{0.45\linewidth}}
+\textbf{Constitutional Provision} & \textbf{Description} \\ \hline\\[0.2cm]
+\makebox[2em][l]{1.}\RaggedRight\arraybackslash \hangindent=2em Article 256 & \RaggedRight\arraybackslash \hangindent=0pt Union's power to give directions to a State as to the construction and maintenance of means of communication declared to be of national or military importance. \\
+\\[0.3\baselineskip]
+\makebox[2em][l]{2.}\RaggedRight\arraybackslash \hangindent=2em Article 257(4) & \RaggedRight\arraybackslash \hangindent=0pt Deals with the power of the Union to entrust functions to a State government with the consent of that State government. \\
+\\[0.3\baselineskip]
+\makebox[2em][l]{3.}\RaggedRight\arraybackslash \hangindent=2em Article 258(2) & \RaggedRight\arraybackslash \hangindent=0pt Deals with the power of the State to entrust functions to the Union government with the consent of that Union government. \\
+\\[0.3\baselineskip]
+\makebox[2em][l]{4.}\RaggedRight\arraybackslash \hangindent=2em Article 263 & \RaggedRight\arraybackslash \hangindent=0pt Establishment of an Inter-State Council if at any time it appears to the President that the establishment of such a Council would serve the public interests. \\
+\end{tabularx}\end{center}\normalsize
+\setlength\tabcolsep{6pt} % Restore default column separation
 \begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]
-\item 1 only
-\item 2 only
-\item Both 1 and 2
-\item Neither 1 nor 2
-\end{enumerate}
-\vspace{0.1in}
-\item\needspace{2\baselineskip} Consider the following statements regarding the Sarkaria Commission:\\\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]
-\item 1. It recommended the abolition of Article 356 of the Constitution, advocating for alternative mechanisms to address constitutional breakdowns in states.
-\item 2. It suggested that the Governor should be an eminent person from outside the state, and should be detached from local politics of the state.
-\end{enumerate}
-Which of the statements given above is/are correct?\\
-\begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]
-\item (a) 1 only
-\item (b) 2 only
-\item (c) Both 1 and 2
-\item (d) Neither 1 nor 2
-\end{enumerate}
-\vspace{0.1in}
-\item\needspace{2\baselineskip} Consider the following:\\\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]
-\item The power to legislate on residuary subjects.
-\item The appointment and removal of Governors of States.
-\item The composition and powers of the Inter-State Council.
-\item The principles governing the distribution of tax revenues between the Centre and the States.
-\end{enumerate}
-How many of the above reflect the Union Government's dominance in Centre-State relations in India?\\
-\begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]
-\item Only One
-\item Only Two
-\item Only Three
-\item Only Four
-\end{enumerate}
-\vspace{0.1in}
-\item\needspace{2\baselineskip} Consider the following statements:\\\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]
-\item Article 263 of the Indian Constitution mandates the establishment of an Inter-State Council only upon the recommendation of the Sarkaria Commission.
-\item The recommendations of the Punchhi Commission on Centre-State relations suggest that the Governor of a state should not be burdened with the Chancellorship of universities.
-\end{enumerate}
-Which of the statements given above is/are correct?\\
-\begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]
-\item 1 only
-\item 2 only
-\item Both 1 and 2
-\item Neither 1 nor 2
+\item 1 and 4 only
+\item 2 and 3 only
+\item 1, 3 and 4 only
+\item 1, 2, 3 and 4
 \end{enumerate}
 \vspace{0.1in}
 

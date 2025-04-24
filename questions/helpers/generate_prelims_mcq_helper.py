@@ -1,5 +1,4 @@
 import json
-
 import gradio as gr
 import os
 
@@ -61,6 +60,20 @@ def generate_and_format(question_type, keywords):
     return parsed_json
 
 
+def save_json_to_file(json_output):
+    if json_output:
+        try:
+            data_to_save = {"en": json_output}
+            with open("mcq_output.json", "a") as f:
+                json.dump(data_to_save, f, indent=4)
+                f.write(',\n')  # Add a comma and newline for appending multiple JSON objects
+            return "JSON output appended to mcq_output.json"
+        except Exception as e:
+            return f"Error saving JSON: {e}"
+    else:
+        return "No JSON output to save."
+
+
 css = """
 #output_box {
     width: 100% !important; /* Adjust percentage as needed */
@@ -82,12 +95,21 @@ with gr.Blocks(css=css) as iface:
         )
         keywords_textbox = gr.Textbox(label="Keywords/Topics (comma-separated)")
     output_json = gr.JSON(label="Generated MCQ", elem_id="output_box")
-    generate_button = gr.Button("Generate MCQ")
+    with gr.Row():
+        generate_button = gr.Button("Generate MCQ")
+        save_button = gr.Button("Save JSON to File")
+    save_status = gr.Textbox(label="Save Status")
 
     generate_button.click(
         fn=generate_and_format,
         inputs=[question_type_dropdown, keywords_textbox],
         outputs=output_json
+    )
+
+    save_button.click(
+        fn=save_json_to_file,
+        inputs=[output_json],
+        outputs=save_status
     )
 
 iface.launch()

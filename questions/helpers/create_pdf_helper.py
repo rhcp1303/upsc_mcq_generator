@@ -83,125 +83,61 @@ def numbered_pair_to_latex(pair, number=""):
         pair[0] + r" & \RaggedRight\arraybackslash \hangindent=0pt " + pair[1] + r" \\" + "\n"
 
 
-questions = [
+questions = [{
+    "en": {
+        "question": "With reference to Centre-State relations in India, consider the following statements:",
+        "statements": [
+            "The Sarkaria Commission recommended the establishment of a permanent Inter-State Council under Article 263 of the Constitution, but proposed that its decisions should be binding on both the Union and the States.",
+            "The Finance Commission's recommendations on the distribution of tax revenue between the Union and the States are binding on the Union Government, ensuring predictable and equitable resource allocation.",
+            "Article 356 of the Constitution, concerning President's Rule, can only be invoked if there is a breakdown of constitutional machinery in the entire state, and not in a specific part or region of the state."
+        ],
+        "final_statement": "Which of the statements given above is/are correct?",
+        "choices": [
+            "Only one",
+            "Only two",
+            "All three",
+            "None"
+        ],
+        "correct_answer": "d",
+        "explanation": "Statement 1 is incorrect. While the Sarkaria Commission did recommend the establishment of a permanent Inter-State Council under Article 263, it specifically stated that the Council's recommendations should be advisory in nature, not binding. The intention was to foster cooperation and consultation, not to create a mechanism where the Union or States could be forced to comply with the Council's decisions. Making the decisions binding would potentially undermine the federal structure by limiting the autonomy of both the Union and the States to make their own policy choices within their respective spheres of competence. The Inter-State Council aims to promote dialogue and consensus-building, respecting the sovereignty of each level of government. \n\nStatement 2 is incorrect. The recommendations of the Finance Commission are advisory in nature, not binding. While the Union Government generally accepts and implements these recommendations, it retains the discretion to deviate from them. The Finance Commission, constituted under Article 280 of the Constitution, makes recommendations on the distribution of net proceeds of taxes between the Union and the States, and the principles governing grants-in-aid to the States out of the Consolidated Fund of India. However, the final decision on accepting and implementing these recommendations rests with the Union Government, subject to parliamentary approval. This allows the Union Government to consider broader economic and fiscal priorities while making resource allocation decisions. \n\nStatement 3 is incorrect. Article 356 can be invoked not only when there is a breakdown of constitutional machinery in the entire state, but also if such a breakdown occurs in a part of the state, making the overall governance of the state impossible to carry on in accordance with the provisions of the Constitution. While the general understanding is that Article 356 is invoked for the entire state, the Supreme Court has clarified through judicial pronouncements that a partial breakdown can also justify its imposition. This interpretation provides flexibility to the Union Government to address specific situations of constitutional crisis within a state without necessarily taking over the entire administration. However, the use of Article 356 remains a sensitive issue due to its potential for misuse and its impact on federalism."
+    }
+},
     {
         "en": {
-            "question": "With reference to Centre-State Relations, consider the following pairs:",
-            "headings": ["Committee/Commission with very long text",
-                         "Associated Recommendation that is also quite lengthy"],
+            "question": "With reference to Centre-State relations, consider the following pairs:",
+            "headings": [
+                "Constitutional Provision",
+                "Description"
+            ],
             "pairs": [
-                ["Sarkaria Commission with a slightly longer name",
-                 "Permanent Inter-State Council under Article 263 which can also have more words"],
-                ["Punchhi Commission",
-                 "Regulation of deployment of Central Armed Forces in States to a significant extent"],
-                ["Rajamannar Committee with an extended title",
-                 "Abolition of All India Services and related matters that require more space"],
+                [
+                    "Article 256",
+                    "Union's power to give directions to a State as to the construction and maintenance of means of communication declared to be of national or military importance."
+                ],
+                [
+                    "Article 257(4)",
+                    "Deals with the power of the Union to entrust functions to a State government with the consent of that State government."
+                ],
+                [
+                    "Article 258(2)",
+                    "Deals with the power of the State to entrust functions to the Union government with the consent of that Union government."
+                ],
+                [
+                    "Article 263",
+                    "Establishment of an Inter-State Council if at any time it appears to the President that the establishment of such a Council would serve the public interests."
+                ]
             ],
+            "final_statement": "Which of the pairs given above is/are correctly matched?",
             "choices": [
-                "1 only",
-                "1 and 2 only",
+                "1 and 4 only",
                 "2 and 3 only",
-                "1, 2 and 3"
+                "1, 3 and 4 only",
+                "1, 2, 3 and 4"
             ],
-        },
-    },
-    {
-        "en": {
-            "question": "Consider the following statements regarding Centre-State financial relations in India:",
-            "statements": [
-                "The Finance Commission's recommendations on the distribution of tax revenues between the Union and the States are binding on the Union Government.",
-                "Grants-in-aid under Article 275 of the Constitution are provided to States based solely on the recommendations of the Finance Commission.",
-                "The Goods and Services Tax (GST) Council is empowered to make recommendations to the Union and the States on matters related to GST, but its decisions are non-binding in nature.",
-            ],
-            "choices": [
-                "Only one",
-                "Only two",
-                "All three",
-                "None"
-            ],
-        },
-    },
-    {
-        "en": {
-            "question": "The Sarkaria Commission's recommendations on Centre-State relations, while largely accepted, faced specific criticisms regarding their implementation and scope. Which of the following best encapsulates a significant critique of the post-Sarkaria Commission scenario?",
-            "choices": [
-                "The near-complete adoption of all recommendations led to an over-centralized system, diminishing state autonomy beyond what the Commission intended.",
-                "The Commission's proposals for fiscal federalism were fully implemented, but the states lacked the administrative capacity to effectively utilize the increased resources.",
-                "Despite some progress, the selective implementation of recommendations, particularly concerning the deployment of central forces in states, often bypassed the spirit of consultation and consensus advocated by the Commission.",
-                "The establishment of the Inter-State Council, as recommended, became defunct due to the lack of political will from both the Centre and the states to address contentious issues.",
-            ],
-        },
-    },
-    {
-        "en": {
-            "question": "Consider the following statements regarding Centre-State financial relations in India:",
-            "statements": [
-                "The Finance Commission is a constitutional body primarily responsible for recommending the distribution of net proceeds of taxes between the Union and the States, and the principles that should govern the grants-in-aid of the revenues of the States out of the Consolidated Fund of India.",
-                "Article 293 of the Constitution empowers the States to borrow only from the Union Government and prevents them from raising loans directly from the open market or other financial institutions.",
-            ],
-            "choices": [
-                "1 only",
-                "2 only",
-                "Both 1 and 2",
-                "Neither 1 nor 2",
-            ],
-        },
-    },
-    {
-        "en": {
-            "question": "Consider the following statements regarding the Sarkaria Commission:",
-            "statements": [
-                "1. It recommended the abolition of Article 356 of the Constitution, advocating for alternative mechanisms to address constitutional breakdowns in states.",
-                "2. It suggested that the Governor should be an eminent person from outside the state, and should be detached from local politics of the state."
-            ],
-            "final_statement": "Which of the statements given above is/are correct?",
-            "choices": [
-                "(a) 1 only",
-                "(b) 2 only",
-                "(c) Both 1 and 2",
-                "(d) Neither 1 nor 2"
-            ],
-            "correct_answer": "(b)",
-            "explanation": "The Sarkaria Commission, established in 1983 to examine and review the working of the existing arrangements between the Union and the States, made several important recommendations to improve Centre-State relations. While the commission did address Article 356, it did not recommend its abolition. Instead, it advocated for its judicious use as a last resort, emphasizing that all other alternatives should be exhausted before invoking it. The commission laid down stringent guidelines for its application, suggesting that it should only be used in cases of demonstrable breakdown of constitutional machinery where the state government is unable to function according to the Constitution. It also suggested that a warning should be issued to the state government before resorting to Article 356 and that the reasons for its imposition should be communicated to the Parliament. Therefore, statement 1 is incorrect.\n\nRegarding the role of the Governor, the Sarkaria Commission made specific recommendations to ensure impartiality and effectiveness. It suggested that the Governor should be an eminent person from outside the state, possessing expertise in various fields. The commission emphasized that the Governor should be detached from local politics and should not have been an active politician in recent years. This recommendation aimed to ensure that the Governor acts as a neutral arbiter and upholds the Constitution without being influenced by local political considerations. The commission also highlighted the importance of consulting the Vice-President and the Speaker of the Lok Sabha when selecting a Governor. Therefore, statement 2 is correct.\n\nIn summary, the Sarkaria Commission's recommendations were aimed at fostering cooperative federalism and improving the overall efficiency of Centre-State relations. Its report has been a valuable resource for policymakers and academics in understanding the complexities of federal governance in India. The commission's emphasis on the judicious use of Article 356 and the importance of an impartial Governor reflects its commitment to upholding the principles of constitutionalism and federalism."
+            "correct_answer": "a",
+            "explanation": "Article 256: Obligation of States and the Union\nThe executive power of every State shall be so exercised as to ensure compliance with the laws made by Parliament and any existing laws which apply in that State, and the executive power of the Union shall extend to the giving of such directions to a State as may appear to the Government of India to be necessary for that purpose.\n\nArticle 257(2): The executive power of the Union shall also extend to the giving of directions to a State as to the construction and maintenance of means of communication declared in the direction to be of national or military importance.\n\nArticle 258(1): Notwithstanding anything in this Constitution, the President may, with the consent of the Government of a State, entrust either conditionally or unconditionally to that Government or to its officers functions in relation to any matter to which the executive power of the Union extends.\nArticle 258(2): A law made by Parliament which applies in any State may, notwithstanding that it relates to a matter with respect to which the Legislature of the State has no power to make laws, confer powers and impose duties, or authorise the conferring of powers and the imposition of duties, upon the State or officers and authorities thereof.\nArticle 263: Provisions with respect to an inter-State Council.\nIf at any time it appears to the President that the public interests would be served by the establishment of a Council for inquiring into and advising upon disputes which may have arisen between States; investigating and discussing subjects in which some or all of the States, or the Union and one or more of the States, have a common interest; or making recommendations upon any such subject and, in particular, recommendations for the better co-ordination of policy and action with respect to that subject, it shall be lawful for the President by order to establish such a Council, and to define the nature of the duties to be performed by it and the organisation and procedure thereof.\n\nTherefore, only pairs 1 and 4 are correctly matched. Article 257(4) doesn't exist and Article 258(2) is incorrectly described, and Article 263 is correctly described."
         }
-    },
-    {
-        "en": {
-            "question": "Consider the following:",
-            "statements": [
-                "The power to legislate on residuary subjects.",
-                "The appointment and removal of Governors of States.",
-                "The composition and powers of the Inter-State Council.",
-                "The principles governing the distribution of tax revenues between the Centre and the States."
-            ],
-            "final_statement": "How many of the above reflect the Union Government's dominance in Centre-State relations in India?",
-            "choices": [
-                "Only One",
-                "Only Two",
-                "Only Three",
-                "Only Four"
-            ]
-        },
-
-    },
-    {
-        "en": {
-            "question": "Consider the following statements:",
-            "statements": [
-                "Article 263 of the Indian Constitution mandates the establishment of an Inter-State Council only upon the recommendation of the Sarkaria Commission.",
-                "The recommendations of the Punchhi Commission on Centre-State relations suggest that the Governor of a state should not be burdened with the Chancellorship of universities."
-            ],
-            "final_statement": "Which of the statements given above is/are correct?",
-            "choices": [
-                "1 only",
-                "2 only",
-                "Both 1 and 2",
-                "Neither 1 nor 2"
-            ],
-            "correct_answer": "b",
-            "explanation": "Statement 1 is incorrect. Article 263 empowers the President to establish an Inter-State Council if he feels that such a council would serve the public interest. The Sarkaria Commission (1983-1988) did recommend the establishment of a permanent Inter-State Council under Article 263. However, Article 263 itself does not mandate the establishment of the council only upon the recommendation of the Sarkaria Commission. The President can act independently based on his assessment of the public interest. The Inter-State Council was first established in 1990. Article 263 states: \"If at any time it appears to the President that the public interests would be served by the establishment of a Council charged with the duty of (a) inquiring into and advising upon disputes which may have arisen between States; (b) investigating and discussing subjects in which some or all of the States, or the Union and one or more of the States, have a common interest; or (c) making recommendations upon any such subject and, in particular, recommendations for the better co-ordination of policy and action with respect to that subject, it shall be lawful for the President by order to establish such a Council, and to define the nature of the duties to be performed by it and its organization and procedure.\"\n\nStatement 2 is correct. The Punchhi Commission (2007-2010) on Centre-State relations made several recommendations to improve the functioning of the federal system. One of its recommendations was that the Governor of a state should not be burdened with the Chancellorship of universities. The Commission argued that the Governor's role as Chancellor often involves them in the day-to-day administration of the universities, which can compromise their impartiality and neutrality. The Punchhi Commission felt that the Governor should be free from such responsibilities to focus on their constitutional duties as the head of the state. This recommendation stems from a broader concern about maintaining the Governor's non-partisan role and avoiding unnecessary conflicts with the state government. The Commission noted the potential for friction when the Governor, as Chancellor, is involved in university affairs, especially concerning appointments and policy decisions. Therefore, they recommended separating these roles to ensure the Governor's focus remains on their constitutional responsibilities and to minimize potential areas of conflict between the Governor and the state government. This separation is intended to enhance the Governor's ability to act as a neutral arbiter and advisor to the state government, promoting smoother Centre-State relations and better governance within the state."
-        }
-    },
+    }
 ]
 
 
