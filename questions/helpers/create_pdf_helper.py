@@ -1,6 +1,4 @@
 def create_latex_template(questions):
-    """Generates the main LaTeX template using multicols."""
-
     latex_template = r"""
 \documentclass[10pt,a4paper]{article}
 \usepackage[margin=0.7in]{geometry}
@@ -27,7 +25,6 @@ def create_latex_template(questions):
     for q in questions:
         latex_template += r"\item\needspace{2\baselineskip} " + q['en']['question'] + r"\\"
 
-        # Handle "Match the pairs"
         if 'pairs' in q['en']:
             if 'headings' in q['en']:
                 latex_template += r"\begin{center}\fontsize{9pt}{11pt}\selectfont" + "\n"
@@ -50,7 +47,7 @@ def create_latex_template(questions):
                     latex_template += r"\n"
                 latex_template += r"\end{enumerate}" + "\n"
 
-        elif 'statements' in q['en']:  # Handle statements
+        elif 'statements' in q['en']:
             latex_template += r"\begin{enumerate}[label=\arabic*., leftmargin=0.6cm, itemsep=0in]" + "\n"
             for s in q['en']['statements']:
                 latex_template += r"\item " + s + r"" + "\n"
@@ -58,7 +55,7 @@ def create_latex_template(questions):
             if 'final_statement' in q['en']:
                 latex_template += q['en']['final_statement'] + r"\\" + "\n"
 
-        if 'choices' in q['en']:  # Handle multiple choices
+        if 'choices' in q['en']:
             latex_template += r"\begin{enumerate}[label=(\alph*), leftmargin=0.4cm, itemsep=0in]" + "\n"
             for choice in q['en']['choices']:
                 latex_template += r"\item " + choice + r"" + "\n"
@@ -77,8 +74,7 @@ def create_latex_template(questions):
 
 
 def numbered_pair_to_latex(pair, number=""):
-    """Formats a numbered pair for LaTeX table with hanging indentation for line breaks."""
-    indent_length = "2em"  # Adjust this value as needed for the width of the number
+    indent_length = "2em"
     return r"\makebox[" + indent_length + r"][l]{" + number + r"}\RaggedRight\arraybackslash \hangindent=" + indent_length + r" " + \
         pair[0] + r" & \RaggedRight\arraybackslash \hangindent=0pt " + pair[1] + r" \\" + "\n"
 
