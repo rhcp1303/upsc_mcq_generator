@@ -13,6 +13,7 @@ from ..helpers.prompt_helpers.identify_features_question_prompt_helper import \
     identify_features_question_prompt
 from ..helpers.prompt_helpers.match_the_pairs_question_prompt_helper import \
     match_the_pairs_prompt
+from ..helpers.common_utils import SubjectCode, QuestionContentType
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
@@ -39,7 +40,6 @@ def generate_mock_mcq(question_type, keywords):
     elif question_type == "Identify Features":
         prompt = identify_features_question_prompt
         api_key = api_key_5
-
     else:
         return "Invalid question type"
 
@@ -50,18 +50,22 @@ def generate_mock_mcq(question_type, keywords):
     return response
 
 
-def generate_and_format(question_type, keywords):
+def generate_and_format(question_type, keywords, subject, question_content_type):
     raw_response = generate_mock_mcq(question_type, keywords)
-    print("raw response:\n")
-    print(raw_response)
     cleaned_json = raw_response.replace("```json", "").replace("```", "")
-    print("cleaned json: \n"+cleaned_json)
-    parsed_json = json.loads(cleaned_json)
-    return parsed_json
+    print("cleaned json response: \n" + cleaned_json)
+    try:
+        parsed_json = json.loads(cleaned_json)
+        parsed_json["subject"] = subject
+        parsed_json["question_content_type"] = question_content_type
+        return parsed_json
+    except json.JSONDecodeError as e:
+        print(f"JSON Decode Error: {e}")
+        return {"error": "Failed to parse JSON response."}
 
 
 def save_json_to_file(json_output):
-    if json_output:
+    if json_output and "error" not in json_output:
         try:
             data_to_save = {"en": json_output}
             with open("temp/mcq_output.json", "a") as f:
@@ -71,7 +75,7 @@ def save_json_to_file(json_output):
         except Exception as e:
             return f"Error saving JSON: {e}"
     else:
-        return "No JSON output to save."
+        return "No valid JSON output to save."
 
 
 css = """
@@ -89,6 +93,15 @@ css = """
 with gr.Blocks(css=css) as iface:
     gr.Markdown("# Mock MCQ Generator (UPSC Style)")
     with gr.Row():
+        subject_dropdown = gr.Dropdown(
+            choices=[subject.name for subject in SubjectCode],
+            label="Subject"
+        )
+        question_content_type_dropdown = gr.Dropdown(
+            choices=[content_type.name for content_type in QuestionContentType],
+            label="Question Content Type"
+        )
+    with gr.Row():
         question_type_dropdown = gr.Dropdown(
             choices=["Single Statement", "Two Statements", "Three Statements", "Match the Pairs", "Identify Features"],
             label="Question Type"
@@ -102,7 +115,7 @@ with gr.Blocks(css=css) as iface:
 
     generate_button.click(
         fn=generate_and_format,
-        inputs=[question_type_dropdown, keywords_textbox],
+        inputs=[question_type_dropdown, keywords_textbox, subject_dropdown, question_content_type_dropdown],
         outputs=output_json
     )
 
