@@ -1,8 +1,7 @@
 import json
 import gradio as gr
 import os
-
-from langchain_google_genai import ChatGoogleGenerativeAI
+import google.generativeai as genai
 from ..helpers.prompt_helpers.single_statement_question_prompt_helper import \
     single_statement_question_prompt
 from ..helpers.prompt_helpers.two_statements_question_prompt_helper import \
@@ -40,14 +39,12 @@ def generate_mock_mcq(question_type, keywords):
     elif question_type == "Identify Features":
         prompt = identify_features_question_prompt
         api_key = api_key_5
-    else:
-        return "Invalid question type"
 
     query = prompt.format(topics=keywords)
-    os.environ["GOOGLE_API_KEY"] = api_key
-    llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
-    response = llm.invoke(query).content
-    return response
+    genai.configure(api_key=api_key)
+    model = genai.GenerativeModel('gemini-2.0-flash')
+    response = model.generate_content(query)
+    return response.text
 
 
 def generate_and_format(question_type, keywords, subject, question_content_type):
