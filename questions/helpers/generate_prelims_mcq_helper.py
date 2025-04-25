@@ -1,6 +1,7 @@
 import json
 import gradio as gr
 import os
+import re
 import google.generativeai as genai
 from ..helpers.prompt_helpers.single_statement_question_prompt_helper import \
     single_statement_question_prompt
@@ -21,6 +22,15 @@ api_key_2 = "AIzaSyC_w68KVtMCloF5V3NKAUBp6EdhqcA0ylw"
 api_key_3 = "AIzaSyAA39dIq31iDJR-i7mZRWEKhkVVIr1Bz4g"
 api_key_4 = "AIzaSyD0nx9rH7HhQZDpJrY0hOaOR9Xok4r-liM"
 api_key_5 = "AIzaSyBq2_GdMf0KhowSVSb0hn4Z_8B81kBewXY"
+
+
+def replace_newlines_in_explanation(json_string):
+    def replace(match):
+        explanation_text = match.group(1)
+        return f'"explanation": "{explanation_text.replace("\n", "\\\\n")}"'
+
+    modified_string = re.sub(r'"explanation":\s*"([^"]*)"', replace, json_string)
+    return modified_string
 
 
 def generate_mock_mcq(question_type, keywords):
@@ -50,9 +60,10 @@ def generate_mock_mcq(question_type, keywords):
 def generate_and_format(question_type, keywords, subject, question_content_type):
     raw_response = generate_mock_mcq(question_type, keywords)
     cleaned_json = raw_response.replace("```json", "").replace("```", "")
-    print("cleaned json response: \n" + cleaned_json)
+    fixed_json = replace_newlines_in_explanation(cleaned_json)
+    print("cleaned json response: \n" + fixed_json)
     try:
-        parsed_json = json.loads(cleaned_json)
+        parsed_json = json.loads(fixed_json)
         parsed_json["subject"] = subject
         parsed_json["question_content_type"] = question_content_type
         return parsed_json
