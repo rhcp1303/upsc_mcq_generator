@@ -64,7 +64,7 @@ def save_json_to_file(json_output):
     if json_output:
         try:
             data_to_save = {"en": json_output}
-            with open("mcq_output.json", "a") as f:
+            with open("temp/mcq_output.json", "a") as f:
                 json.dump(data_to_save, f, indent=4)
                 f.write(',\n')
             return "JSON output appended to mcq_output.json"

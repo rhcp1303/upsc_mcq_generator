@@ -11,8 +11,8 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         latex_code_questions = helper.create_question_pdf()
         latex_code_solutions = helper.create_solution_pdf()
-        with open("latex_question.txt","w") as file:
+        with open("temp/latex_question.txt","w") as file:
             file.write(latex_code_questions)
-        with open("latex_solution.txt","w") as file:
+        with open("temp/latex_solution.txt","w") as file:
             file.write(latex_code_solutions)
         print("here")
