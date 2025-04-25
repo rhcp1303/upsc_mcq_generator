@@ -66,7 +66,7 @@ def save_json_to_file(json_output):
             data_to_save = {"en": json_output}
             with open("mcq_output.json", "a") as f:
                 json.dump(data_to_save, f, indent=4)
-                f.write(',\n')  # Add a comma and newline for appending multiple JSON objects
+                f.write(',\n')
             return "JSON output appended to mcq_output.json"
         except Exception as e:
             return f"Error saving JSON: {e}"
