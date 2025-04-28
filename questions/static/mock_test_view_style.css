@@ -1,4 +1,3 @@
-/* mock_test_view_style.css */
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #667eea, #764ba2);
@@ -52,9 +51,9 @@ body {
     padding: 20px;
     border-radius: 8px;
     margin-top: 40px;
-    margin-bottom: 100px; /* Adjust for fixed button height */
+    margin-bottom: 100px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    position: relative; /* For positioning the fixed button container */
+    position: relative;
 }
 
 #startBtn {
@@ -79,9 +78,9 @@ body {
 }
 
 #questionContainer {
-    margin-bottom: 0px; /* Space for the fixed buttons */
+    margin-bottom: 0px;
     overflow-y: auto;
-    max-height: 70vh; /* Adjust as needed */
+    max-height: 70vh;
     padding-bottom: 20px;
 }
 
@@ -103,65 +102,46 @@ body {
 }
 
 .final-statement {
-    font-weight: bold;
     margin-top: 15px;
 }
 
-.pairs-table {
-    width: 100%;
-    border-collapse: collapse;
+.pairs-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
     margin-top: 10px;
     margin-bottom: 15px;
-    table-layout: fixed; /* Crucial for fixed column widths */
+    width: 100%;
 }
 
-.pairs-table th, .pairs-table td {
-    padding: 8px;
-    border: 1px solid #e0e0e0;
-    text-align: left;
-    word-break: break-word;
+.pairs-heading-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
-.pairs-table th {
-    background-color: #f0f0f0;
+.pair-heading {
     font-weight: bold;
+    padding: 8px;
     text-align: center;
-    display: flex; /* Use flexbox for headings */
-    justify-content: center; /* Center content within heading */
-    align-items: center; /* Vertically align if needed */
+    border-bottom: 2px solid #ccc;
 }
 
-.pairs-table tbody td {
-    display: flex; /* Use flexbox for pair parts */
-    align-items: center; /* Vertically align if needed */
+.pair-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #f9f9f9;
 }
 
-.pairs-table thead th:first-child,
-.pairs-table tbody td:first-child {
-    width: 30px;
-    text-align: center;
-    flex-shrink: 0; /* Don't allow numbering column to shrink */
+.pair-number {
+    margin-right: 10px;
+    color: #000;
 }
-
-/* For a two-column pair (excluding numbering) */
-.pairs-table.cols-2 thead th:nth-child(2),
-.pairs-table.cols-2 thead th:nth-child(3),
-.pairs-table.cols-2 tbody td:nth-child(2),
-.pairs-table.cols-2 tbody td:nth-child(3) {
-    width: calc((100% - 30px) / 2);
-}
-
-/* For a three-column pair */
-.pairs-table.cols-3 thead th:nth-child(2),
-.pairs-table.cols-3 thead th:nth-child(3),
-.pairs-table.cols-3 thead th:nth-child(4),
-.pairs-table.cols-3 tbody td:nth-child(2),
-.pairs-table.cols-3 tbody td:nth-child(3),
-.pairs-table.cols-3 tbody td:nth-child(4) {
-    width: calc((100% - 30px) / 3);
-}
-
-/* Add more rules for more columns as needed */
 
 .option-btn {
     display: flex;
@@ -460,8 +440,7 @@ h1 {
     background-color: #667eea;
     color: #000;
     cursor: pointer;
-    transition: transform 0.2s ease
-    0.2s ease, background-color 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -469,10 +448,4 @@ h1 {
     transform: scale(1.05);
     background-color: #E14D55;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-/* Style for the pair number in the table */
-.pair-number {
-    font-weight: bold;
-    text-align: center;
 }
