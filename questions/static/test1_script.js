@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         questionNumberFrame.textContent = `Q. ${currentQuestionIndex + 1} )`;
         questionContainer.appendChild(questionNumberFrame);
 
-        const questionTextElement = document.createElement('h3');
+        const questionTextElement = document.createElement('h4');
         questionTextElement.innerHTML = questionData.question;
         questionContainer.appendChild(questionTextElement);
 
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             table.classList.add(`cols-${questionData.headings.length}`);
             const thead = table.createTHead();
             const headerRow = thead.insertRow();
-            headerRow.insertCell().textContent = ''; // Empty cell for numbering
+            headerRow.insertCell().textContent = '';
             questionData.headings.forEach(heading => {
                 const th = document.createElement('th');
                 th.textContent = heading;
