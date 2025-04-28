@@ -1,0 +1,114 @@
+[
+  {
+    "en": {
+      "question": "The Kakori Conspiracy of 1925, a pivotal event in the Indian independence movement, was motivated by which of the following primary objectives?",
+      "choices": [
+        "To assassinate high-ranking British officials to destabilize the colonial administration.",
+        "To secure funds for the Hindustan Republican Association (HRA) through expropriation, enabling the organization to procure arms and further its revolutionary activities.",
+        "To garner widespread public support for the cause of complete independence (Purna Swaraj) by demonstrating the vulnerability of the British Raj.",
+        "To instigate a nationwide peasant revolt against the British land revenue system, crippling the economic foundations of colonial rule."
+      ],
+      "correct_answer": "b",
+      "explanation": "The Kakori Conspiracy, orchestrated by members of the Hindustan Republican Association (HRA), was fundamentally driven by the pressing need for funds to sustain their revolutionary activities. The HRA, a radical organization advocating for complete independence, faced a severe financial crunch that hampered its ability to acquire weapons, disseminate propaganda, and recruit new members. \n\nOption (a) is incorrect. While the HRA aimed to undermine British authority, assassination wasn't their primary tactic at this stage. The focus was on building organizational strength and resources for a larger struggle. Option (c) is also incorrect. While the Kakori incident did generate public attention and sympathy, its core purpose wasn't solely to galvanize popular support. The primary aim remained the acquisition of funds. Option (d) is incorrect as well. The HRA's primary focus was not on peasant revolts specifically but rather on overthrowing British rule through armed struggle and revolutionary means; funding through various means, including expropriation of government assets, was crucial.\n\nThe choice of robbing a train carrying government money was a calculated decision. It presented an opportunity to replenish the HRA's dwindling resources without directly targeting civilians, minimizing the risk of alienating potential supporters. The funds acquired from the Kakori train robbery were intended to be used for purchasing weapons, printing revolutionary literature, and expanding the HRA's organizational network. The incident highlighted the HRA's commitment to armed resistance and its willingness to take bold actions to achieve its goals. Key figures like Ram Prasad Bismil, Ashfaqullah Khan, Chandrashekhar Azad, and Rajendra Lahiri were deeply involved in planning and executing the operation, demonstrating their dedication to the cause of Indian independence. The subsequent arrest and trial of the Kakori conspirators further amplified their message and inspired a new generation of revolutionaries. It should be noted that the HRA's ideology blended nationalism with socialist ideals, advocating for a society free from both British rule and economic exploitation. The Kakori incident, therefore, was not merely a robbery but a strategic act of defiance aimed at strengthening a revolutionary organization committed to radical social and political change. In the context of UPSC civil services examination, understanding the nuances of the motivations behind such historical events is crucial for analyzing the complexities of the Indian independence movement and its various strands. The Kakori Conspiracy serves as an important case study of how revolutionary organizations mobilized resources and adopted different strategies to challenge British rule.",
+      "subject": "MODERN_INDIAN_HISTORY",
+      "question_content_type": "STATIC"
+    }
+  },
+  {
+    "en": {
+      "question": "With reference to Indo-Greek, Indo-Parthian and Kushan rulers, consider the following pairs:",
+      "headings": [
+        "Ruler",
+        "Historical Significance"
+      ],
+      "pairs": [
+        [
+          "Menander I",
+          "Known for his patronage of Buddhism and dialogues with the Buddhist monk Nagasena recorded in the Milinda Panha"
+        ],
+        [
+          "Gondophernes I",
+          "Established an independent kingdom in the Punjab region after succeeding in a revolt against the Scythian Empire."
+        ],
+        [
+          "Kanishka I",
+          "His reign marked the zenith of the Kushan Empire, known for the introduction of gold currency and construction of Taxila University."
+        ],
+        [
+          "Menander II",
+          "Ruled as a Soter Megas king and likely a follower of Buddhism, known for the many coin types found with Dharmacakra depiction."
+        ]
+      ],
+      "final_statement": "Which of the pairs given above is/are correctly matched?",
+      "choices": [
+        "1 and 2 only",
+        "1 and 4 only",
+        "1, 2 and 3 only",
+        "1, 2 and 4 only"
+      ],
+      "correct_answer": "b",
+      "explanation": "Menander I, also known as Milinda in Indian sources, was an Indo-Greek king who ruled in the 2nd century BCE. He is famed for his conversion to Buddhism and the philosophical dialogues he had with the Buddhist sage Nagasena, which are documented in the Milinda Panha (Questions of Milinda). This text highlights Menander's intellectual curiosity and his embrace of Buddhist teachings, playing a significant role in the spread of Buddhism in the Indo-Greek territories. Gondophernes I founded the Indo-Parthian Kingdom in the 1st century CE. While he established independence in the Punjab region, his kingdom emerged not from a revolt against the Scythian Empire, but rather from the decline of the Indo-Greek and Scythian power, particularly after the death of Azes II. His rule represented a consolidation of Parthian influence in the northwestern Indian subcontinent. Kanishka I, a Kushan emperor ruling in the 2nd century CE, is renowned for several key achievements. While his reign indeed marked a high point for the Kushan Empire, which stretched across Central Asia and into northern India, and while he supported Buddhism, the assertion that he introduced gold currency is an oversimplification. Gold coinage existed prior to Kanishka, but he standardized it within the Kushan realm. Similarly, while Taxila was a major center of learning during his rule, and the Kushans contributed to its development, Kanishka is not credited with its initial founding or construction. Kanishka is best known for the patronage of Buddhism and the convening of the Fourth Buddhist Council. Menander II ruled at a later period and is thought to be a follower of Buddhism. He issued a number of coin types, many of which had the Dharmacakra depicted on them. Thus pairs 1 and 4 are correct while pair 2 is incorrect as Gondophernes established an independent kingdom after decline of Indo-Greek and Scythian power not through revolt against scythians. Pair 3 is incorrect, while Kanishka's reign marked the zenith of the Kushan Empire, he is not known for the introduction of gold currency and construction of Taxila University. The Kushans issued gold coins that were inspired by Roman standards and their construction of Taxila University is not primary source based information. Also it was already a major centre of learning.",
+      "subject": "MODERN_INDIAN_HISTORY",
+      "question_content_type": "STATIC"
+    }
+  },
+  {
+    "en": {
+      "question": "Consider the following:",
+      "statements": [
+        "An increase in government spending financed by borrowing",
+        "An increase in the reserve requirement ratio by the central bank",
+        "A decrease in exports due to a global recession",
+        "Increased confidence among businesses leading to higher investment"
+      ],
+      "final_statement": "How many of the above scenarios, in isolation, would likely lead to a decrease in bond prices?",
+      "choices": [
+        "Only one",
+        "Only two",
+        "Only three",
+        "All four"
+      ],
+      "correct_answer": "b",
+      "explanation": "Let's analyze each scenario to determine its impact on bond prices:\n\n1.  An increase in government spending financed by borrowing:  When the government increases spending and finances it by borrowing, it issues more bonds.  This increased supply of bonds in the market, all other things being equal, puts downward pressure on bond prices.  The increase in borrowing also increases the overall demand for loanable funds, potentially pushing interest rates higher to attract investors to lend to the government.  Higher interest rates and lower bond prices have an inverse relationship.  Therefore, this scenario likely leads to a decrease in bond prices.\n\n2.  An increase in the reserve requirement ratio by the central bank: When the central bank increases the reserve requirement ratio, commercial banks are required to hold a larger percentage of their deposits as reserves. This reduces the amount of money banks have available to lend. The money multiplier effect is reduced, leading to a contraction in the money supply. This tightening of monetary policy tends to increase interest rates as there's less liquidity available.  Higher interest rates cause bond prices to fall because newly issued bonds will offer higher yields, making existing lower-yield bonds less attractive.  Therefore, this scenario likely leads to a decrease in bond prices.\n\n3.  A decrease in exports due to a global recession: A decrease in exports leads to a decline in aggregate demand. In response, policymakers might lower interest rates to stimulate the economy.  Lower interest rates generally cause bond prices to increase as demand for existing bonds with higher coupon rates rises. A recession often leads to a 'flight to safety', with investors moving their funds into safer assets like government bonds, which increases demand and pushes prices up. Therefore, this scenario likely leads to an increase in bond prices, not a decrease.\n\n4.  Increased confidence among businesses leading to higher investment:  Increased business confidence leads to higher investment. This increased investment spurs economic growth. With increased economic activity, there is usually an upward pressure on interest rates. This is because as businesses invest more, the demand for loanable funds increases. Increased economic growth can also lead to expectations of higher inflation, which further pushes interest rates upwards to compensate investors for the erosion of their returns by inflation. Higher interest rates tend to decrease bond prices as the yields on newly issued bonds rise, making older, lower-yield bonds less desirable. However, the effect is more indirect and depends on how the central bank reacts to this increased investment activity. It's not as direct a driver of falling bond prices as increased government borrowing or a change in reserve requirements. So, this option is less definitive compared to the other options.\n\nBased on the analysis:\n\n*   Scenario 1 leads to a decrease in bond prices.\n*   Scenario 2 leads to a decrease in bond prices.\n*   Scenario 3 leads to an increase in bond prices.\n*   Scenario 4 has a more ambiguous impact and is less direct than the other two, but potentially could lead to decrease bond prices.\n\nTherefore, only two scenarios (1 and 2) directly and predictably lead to a decrease in bond prices.\\n",
+      "subject": "ECONOMICS",
+      "question_content_type": "STATIC"
+    }
+  },
+  {
+    "en": {
+      "question": "Consider the following:",
+      "statements": [
+        "An increase in government spending financed by borrowing",
+        "An increase in the reserve requirement ratio by the central bank",
+        "A decrease in exports due to a global recession",
+        "Increased confidence among businesses leading to higher investment"
+      ],
+      "final_statement": "How many of the above scenarios, in isolation, would likely lead to a decrease in bond prices?",
+      "choices": [
+        "Only one",
+        "Only two",
+        "Only three",
+        "All four"
+      ],
+      "correct_answer": "b",
+      "explanation": "Let's analyze each scenario to determine its impact on bond prices:\n\n1.  An increase in government spending financed by borrowing:  When the government increases spending and finances it by borrowing, it issues more bonds.  This increased supply of bonds in the market, all other things being equal, puts downward pressure on bond prices.  The increase in borrowing also increases the overall demand for loanable funds, potentially pushing interest rates higher to attract investors to lend to the government.  Higher interest rates and lower bond prices have an inverse relationship.  Therefore, this scenario likely leads to a decrease in bond prices.\n\n2.  An increase in the reserve requirement ratio by the central bank: When the central bank increases the reserve requirement ratio, commercial banks are required to hold a larger percentage of their deposits as reserves. This reduces the amount of money banks have available to lend. The money multiplier effect is reduced, leading to a contraction in the money supply. This tightening of monetary policy tends to increase interest rates as there's less liquidity available.  Higher interest rates cause bond prices to fall because newly issued bonds will offer higher yields, making existing lower-yield bonds less attractive.  Therefore, this scenario likely leads to a decrease in bond prices.\n\n3.  A decrease in exports due to a global recession: A decrease in exports leads to a decline in aggregate demand. In response, policymakers might lower interest rates to stimulate the economy.  Lower interest rates generally cause bond prices to increase as demand for existing bonds with higher coupon rates rises. A recession often leads to a 'flight to safety', with investors moving their funds into safer assets like government bonds, which increases demand and pushes prices up. Therefore, this scenario likely leads to an increase in bond prices, not a decrease.\n\n4.  Increased confidence among businesses leading to higher investment:  Increased business confidence leads to higher investment. This increased investment spurs economic growth. With increased economic activity, there is usually an upward pressure on interest rates. This is because as businesses invest more, the demand for loanable funds increases. Increased economic growth can also lead to expectations of higher inflation, which further pushes interest rates upwards to compensate investors for the erosion of their returns by inflation. Higher interest rates tend to decrease bond prices as the yields on newly issued bonds rise, making older, lower-yield bonds less desirable. However, the effect is more indirect and depends on how the central bank reacts to this increased investment activity. It's not as direct a driver of falling bond prices as increased government borrowing or a change in reserve requirements. So, this option is less definitive compared to the other options.\n\nBased on the analysis:\n\n*   Scenario 1 leads to a decrease in bond prices.\n*   Scenario 2 leads to a decrease in bond prices.\n*   Scenario 3 leads to an increase in bond prices.\n*   Scenario 4 has a more ambiguous impact and is less direct than the other two, but potentially could lead to decrease bond prices.\n\nTherefore, only two scenarios (1 and 2) directly and predictably lead to a decrease in bond prices.\\n",
+      "subject": "ECONOMICS",
+      "question_content_type": "STATIC"
+    }
+  },
+  {
+    "en": {
+      "question": "Consider the following statements regarding quantum computing and its potential impact on contemporary cryptography:\n\n1. Shor's algorithm poses a significant threat to widely used asymmetric encryption algorithms like RSA and ECC.\n2. Quantum key distribution (QKD) offers unconditional security based on the laws of physics, rendering it impervious to computational advancements, including quantum computing.\n3. Post-quantum cryptography (PQC) focuses on developing classical cryptographic algorithms that are believed to be secure against both classical and quantum computers.\n\nWhich of the statements given above is/are correct?",
+      "choices": [
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ],
+      "correct_answer": "d",
+      "explanation": "The correct answer is d) 1, 2, and 3. Let's break down each statement and its implications for UPSC aspirants:\n\nStatement 1: Shor's algorithm poses a significant threat to widely used asymmetric encryption algorithms like RSA and ECC.\n\nExplanation: This statement is correct. Shor's algorithm, developed by Peter Shor in 1994, is a quantum algorithm that can efficiently factor large numbers and compute discrete logarithms. These mathematical problems form the basis of the security of RSA (Rivest\u2013Shamir\u2013Adleman) and ECC (Elliptic Curve Cryptography), respectively. If a sufficiently powerful quantum computer were built, it could run Shor's algorithm and break these widely used public-key encryption systems. This poses a considerable threat to secure communications, e-commerce, and various other applications that rely on RSA and ECC.\n\nUPSC Relevance:\n*   Shor's algorithm illustrates the disruptive potential of emerging technologies. Understanding the implications of such algorithms is crucial for policymakers dealing with cybersecurity and data protection.\n*   This topic is relevant to Science and Technology, particularly advancements in computing and their impact on security.\n\nStatement 2: Quantum key distribution (QKD) offers unconditional security based on the laws of physics, rendering it impervious to computational advancements, including quantum computing.\n\nExplanation: This statement is also correct. Quantum Key Distribution (QKD) uses the principles of quantum mechanics to securely distribute encryption keys. Unlike classical cryptography, which relies on the computational difficulty of certain mathematical problems, QKD's security is based on the fundamental laws of physics, such as the Heisenberg uncertainty principle and the no-cloning theorem. Any attempt by an eavesdropper (Eve) to intercept or measure the quantum signals used to distribute the key will inevitably disturb the system, alerting the legitimate parties (Alice and Bob) to the eavesdropping attempt. This allows them to discard the compromised key and establish a new one. While QKD is secure against computational advancements, including quantum computers, it's important to note that practical implementations of QKD are still vulnerable to side-channel attacks and imperfections in hardware.\n\nUPSC Relevance:\n*   QKD represents a paradigm shift in cryptography, offering a potentially future-proof solution to secure communication in the age of quantum computing.\n*   Understanding QKD helps assess the vulnerabilities of existing security infrastructure and the potential of quantum technologies to enhance national security.\n*   QKD connects to topics in Physics and Information Technology.\n\nStatement 3: Post-quantum cryptography (PQC) focuses on developing classical cryptographic algorithms that are believed to be secure against both classical and quantum computers.\n\nExplanation: This statement is also correct. Post-Quantum Cryptography (PQC), also known as quantum-resistant cryptography, aims to develop cryptographic algorithms that are secure against attacks from both classical computers and quantum computers. These algorithms are designed to replace existing algorithms that are vulnerable to Shor's algorithm and other quantum attacks. PQC focuses on classical algorithms, meaning they can be implemented and run on existing computer hardware. The National Institute of Standards and Technology (NIST) is actively involved in a standardization process to select and standardize PQC algorithms for widespread use.\n\nUPSC Relevance:\n*   PQC is a critical area of research and development for maintaining cybersecurity in the quantum era. Understanding the principles and algorithms behind PQC is vital for policymakers, security professionals, and anyone involved in data protection.\n*   This links to topics in Science and Technology, particularly cryptography, and its importance in Governance and Security.\n*   The NIST standardization process is an example of international cooperation and standard-setting in emerging technologies.\n\nIn summary, all three statements are correct. Shor's algorithm threatens existing asymmetric encryption, QKD offers quantum-secured key distribution, and PQC aims to develop quantum-resistant classical algorithms. Understanding these concepts is essential for comprehending the implications of quantum computing on cybersecurity and for informed policymaking.",
+      "subject": "SCIENCE_AND_TECH",
+      "question_content_type": "STATIC"
+    }
+  }
+]
