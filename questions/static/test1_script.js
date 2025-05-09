@@ -10,10 +10,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     const header = document.querySelector('.header');
     const homeButton = document.getElementById('homeButton');
     const homeButtonFrame = document.getElementById('homeButtonFrame');
+    const timerPanel = document.getElementById('timerPanel');
+    const timerDisplay = document.getElementById('timer');
 
     let questions = [];
     let userAnswers = {};
     let currentQuestionIndex = 0;
+    let timerInterval;
+    let timeLeft;
+    const testDuration = 120 * 60;
+    const questionsPerPage = 100;
 
     async function fetchQuestions() {
         try {
@@ -30,10 +36,36 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    function updateTimerDisplay() {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    function startTimer() {
+        timeLeft = testDuration;
+        updateTimerDisplay();
+        timerPanel.style.display = 'block';
+        timerInterval = setInterval(() => {
+            timeLeft--;
+            updateTimerDisplay();
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                showResults();
+                alert("Time's up!");
+            }
+        }, 1000);
+    }
+
+    function stopTimer() {
+        clearInterval(timerInterval);
+    }
+
     startBtn.addEventListener('click', async () => {
         questions = await fetchQuestions();
         if (questions && questions.length > 0) {
             startQuiz();
+            startTimer(); // Start the timer when the quiz begins
         }
     });
 
@@ -49,6 +81,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         scorecardFrame.style.display = 'none';
         questionContainer.style.display = 'block';
         resultsContainer.style.display = 'none';
+        timerPanel.style.display = 'block';
         displayQuestion();
     }
 
@@ -175,10 +208,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function showResults() {
+        stopTimer(); // Stop the timer when results are shown
         questionContainer.style.display = 'none';
         prevBtn.style.display = 'none';
         nextBtn.style.display = 'none';
         submitBtn.style.display = 'none';
+        timerPanel.style.display = 'none'; // Hide the timer panel on results page
         resultsContainer.style.display = 'block';
         homeButtonFrame.style.display = 'block';
         let resultsHTML = '';

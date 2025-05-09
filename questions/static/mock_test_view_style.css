@@ -450,3 +450,34 @@ h1 {
     background-color: #E14D55;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
+
+
+.timer-panel {
+    position: fixed;
+    top: 40px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 100;
+    font-family: 'Poppins', sans-serif;
+    display: none;
+}
+
+.timer-panel h3 {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.timer-panel p#timer {
+    font-size: 1.4em;
+    font-weight: 500;
+    color: #E14D55;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
