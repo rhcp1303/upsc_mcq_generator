@@ -7,7 +7,7 @@
     <title>UPSC Prelims Mock Test</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'mock_test_view_style.css' %}">
-
+    <link rel="stylesheet" href="{% static 'confirmation_modal.css' %}">
 </head>
 <body>
     <div id="modal" class="modal">
@@ -16,6 +16,18 @@
             <p id="modalMessage"></p>
         </div>
     </div>
+
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <h3>Confirm Submission</h3>
+            <p>Are you sure you want to submit the test?</p>
+            <div class="confirmation-buttons">
+                <button id="confirmSubmitBtn">Yes, Submit</button>
+                <button id="cancelSubmitBtn">No, Continue</button>
+            </div>
+        </div>
+    </div>
+
     <div class="header">
         <img src="{% static 'images/business.png' %}" alt="Your Logo" class="logo">
         <div class="tagline-container">
@@ -49,5 +61,6 @@
     </div>
 
     <script src="{% static 'test1_script.js' %}"></script>
+    <script src="script.js"></script>
 </body>
 </html>

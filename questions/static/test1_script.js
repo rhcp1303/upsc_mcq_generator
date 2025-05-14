@@ -1,3 +1,41 @@
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const submitBtn = document.getElementById('submitBtn');
+    const confirmationModal = document.getElementById('confirmationModal');
+    const confirmSubmitBtn = document.getElementById('confirmSubmitBtn');
+    const cancelSubmitBtn = document.getElementById('cancelSubmitBtn');
+
+    submitBtn.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the default submission behavior
+        confirmationModal.style.display = 'block';
+    });
+
+    cancelSubmitBtn.addEventListener('click', () => {
+        confirmationModal.style.display = 'none';
+    });
+
+    confirmSubmitBtn.addEventListener('click', () => {
+        confirmationModal.style.display = 'none';
+        // Call the function in your main script to show results
+        // Assuming the showResults() function is in 'test1_script.js'
+        // You might need to adjust how you call it based on your script's scope.
+        if (window.showResults) {
+            window.showResults();
+        } else {
+            console.error("showResults function not found in the global scope.");
+            // Optionally, you could trigger the submit logic here if you have a form
+        }
+    });
+
+    // Close the modal if the user clicks outside of it
+    window.addEventListener('click', (event) => {
+        if (event.target === confirmationModal) {
+            confirmationModal.style.display = 'none';
+        }
+    });
+});
+
+// test1_script.js (Your original JavaScript)
 document.addEventListener('DOMContentLoaded', async () => {
     const startBtn = document.getElementById('startBtn');
     const questionContainer = document.getElementById('questionContainer');
@@ -326,9 +364,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         resultsContainer.innerHTML = resultsHTML;
     }
 
+    // Make showResults accessible globally
+    window.showResults = showResults;
+
     prevBtn.addEventListener('click', prevQuestion);
     nextBtn.addEventListener('click', nextQuestion);
-    submitBtn.addEventListener('click', showResults);
+    // The submit button event listener is now in script.js
     homeButton.addEventListener('click', () => {
         window.location.href = "";
     });
