@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submitBtn');
     const confirmationModal = document.getElementById('confirmationModal');
@@ -6,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cancelSubmitBtn = document.getElementById('cancelSubmitBtn');
 
     submitBtn.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent the default submission behavior
+        event.preventDefault();
         confirmationModal.style.display = 'block';
     });
 
@@ -23,11 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
             window.showResults();
         } else {
             console.error("showResults function not found in the global scope.");
-            // Optionally, you could trigger the submit logic here if you have a form
         }
     });
 
-    // Close the modal if the user clicks outside of it
     window.addEventListener('click', (event) => {
         if (event.target === confirmationModal) {
             confirmationModal.style.display = 'none';
@@ -35,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// test1_script.js (Your original JavaScript)
 document.addEventListener('DOMContentLoaded', async () => {
     const startBtn = document.getElementById('startBtn');
     const questionContainer = document.getElementById('questionContainer');
@@ -56,7 +52,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let currentQuestionIndex = 0;
     let timerInterval;
     let timeLeft;
-    const testDuration = 120 * 60;
+    const testDuration = 1 * 60;
     const questionsPerPage = 100;
 
     async function fetchQuestions() {
@@ -103,7 +99,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         questions = await fetchQuestions();
         if (questions && questions.length > 0) {
             startQuiz();
-            startTimer(); // Start the timer when the quiz begins
+            startTimer();
         }
     });
 
@@ -246,12 +242,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function showResults() {
-        stopTimer(); // Stop the timer when results are shown
+        stopTimer();
         questionContainer.style.display = 'none';
         prevBtn.style.display = 'none';
         nextBtn.style.display = 'none';
         submitBtn.style.display = 'none';
-        timerPanel.style.display = 'none'; // Hide the timer panel on results page
+        timerPanel.style.display = 'none';
         resultsContainer.style.display = 'block';
         homeButtonFrame.style.display = 'block';
         let resultsHTML = '';
@@ -364,12 +360,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         resultsContainer.innerHTML = resultsHTML;
     }
 
-    // Make showResults accessible globally
     window.showResults = showResults;
-
     prevBtn.addEventListener('click', prevQuestion);
     nextBtn.addEventListener('click', nextQuestion);
-    // The submit button event listener is now in script.js
     homeButton.addEventListener('click', () => {
         window.location.href = "";
     });
