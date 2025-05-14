@@ -1,4 +1,3 @@
-/* mock_test_view_style.css */
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #667eea, #764ba2);
@@ -483,25 +482,24 @@ font-size: 1.4em;
     letter-spacing: 0.5px;
 }
 
-/* confirmation_modal.css */
 #confirmationModal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 200; /* Higher than other elements */
+    display: none;
+    position: fixed;
+    z-index: 200;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #confirmationModal .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
     max-width: 400px;
     border-radius: 8px;
     position: relative;
@@ -551,25 +549,24 @@ font-size: 1.4em;
     background-color: #d32f2f;
 }
 
-/* time_up_modal.css (You might want to create a separate file or add these styles here) */
 #timeUpModal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 210; /* Higher than confirmation modal */
+    display: none;
+    position: fixed;
+    z-index: 210;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #timeUpModal .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
     max-width: 400px;
     border-radius: 8px;
     position: relative;
@@ -590,11 +587,11 @@ font-size: 1.4em;
 
 #timeUpModal .confirmation-buttons {
     display: flex;
-    justify-content: center; /* Center the button */
+    justify-content: center;
 }
 
 #timeUpModal #timeUpSubmitBtn {
-    background-color: #007bff; /* A calming blue */
+    background-color: #007bff;
     color: white;
     padding: 10px 20px;
     border: none;
