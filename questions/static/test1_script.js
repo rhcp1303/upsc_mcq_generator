@@ -15,9 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     confirmSubmitBtn.addEventListener('click', () => {
         confirmationModal.style.display = 'none';
-        // Call the function in your main script to show results
-        // Assuming the showResults() function is in 'test1_script.js'
-        // You might need to adjust how you call it based on your script's scope.
         if (window.showResults) {
             window.showResults();
         } else {
@@ -46,13 +43,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     const homeButtonFrame = document.getElementById('homeButtonFrame');
     const timerPanel = document.getElementById('timerPanel');
     const timerDisplay = document.getElementById('timer');
+    const timeUpModal = document.getElementById('timeUpModal');
+    const timeUpSubmitBtn = document.getElementById('timeUpSubmitBtn');
 
     let questions = [];
     let userAnswers = {};
     let currentQuestionIndex = 0;
     let timerInterval;
     let timeLeft;
-    const testDuration = 1 * 60;
+    const testDuration = 120 * 60;
     const questionsPerPage = 100;
 
     async function fetchQuestions() {
@@ -85,8 +84,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             updateTimerDisplay();
             if (timeLeft <= 0) {
                 clearInterval(timerInterval);
-                showResults();
-                alert("Time's up!");
+                showTimeUpModal();
             }
         }, 1000);
     }
@@ -94,6 +92,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     function stopTimer() {
         clearInterval(timerInterval);
     }
+
+    function showTimeUpModal() {
+        timeUpModal.style.display = 'block';
+    }
+
+    timeUpSubmitBtn.addEventListener('click', () => {
+        timeUpModal.style.display = 'none';
+        showResults();
+    });
 
     startBtn.addEventListener('click', async () => {
         questions = await fetchQuestions();
